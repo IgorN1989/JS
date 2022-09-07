@@ -1,0 +1,40 @@
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  width: 480px;
+  height: 1000px;
+  margin: 40px;
+background-color: tomato;
+}
+
+.star {
+  background-color:#7EB101;
+}
+
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+
+.customers__item {
+  outline: 1px solid blue;
+  padding: 8px 8px 8px 8px;
+  background-image: url(../images/folder/feedback-bacground.svg);
+
+  background-repeat: no-repeat;
+}
+
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
