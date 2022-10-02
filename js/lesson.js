@@ -1,27 +1,76 @@
-"use strict";
+const Operation = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withfraw',
+};
 
-// Math.floor(num) - повертає найбільше ціле число,
-// менше, або яке дорівнює зазначеному числу
-console.log(Math.floor(1.7)); // 1
+const account = {
+  balance: 0,
+  allTransactions: [{ amount: 1000, type: 'deposit', id: 1664136205658 }],
 
-// Math.ceil(num) - повертає найменше ціле число,
-// більше, або яке дорівнює зазначеному числу.
-console.log(Math.ceil(1.2)); // 2
+  createTransaction(amount, type) {
+    const transaction = {
+      amount,
+      type,
+      id: Date.now(),
+    };
+    return transaction;
+  },
 
-// Math.round(num) - повертає значення числа,
-// округленого до найближчого цілого
-console.log(Math.round(1.2)); // 1
-console.log(Math.round(1.5)); // 2
+  deposit(amount) {
+    const transaction = this.createTransaction(amount, Operation.DEPOSIT);
+    this.allTransactions.push(transaction);
+    this.balance += amount;
+  },
 
-// Math.max(num1, num2, ...) - повертає найбільше ціле число з набору
-console.log(Math.max(20, 10, 50, 40)); // 50
+  withdraw(amount) {
+    if (this.balance < amount) {
+      console.log('недостатньо коштів');
+      return;
+    }
 
-// Math.min(num1, num2, ...) - повертає найменше ціле число з набору
-console.log(Math.min(20, 10, 50, 40)); // 10
+    const transaction = this.createTransaction(amount, Operation.WITHDRAW);
+    this.allTransactions.push(transaction);
+    this.balance -= amount;
+  },
 
-// Math.pow(base, exponent) - піднесення до степеня
-console.log(Math.pow(2, 4)); // 16
+  getBalance() {
+    console.log(this.balance);
+  },
 
-// Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
-console.log(Math.random()); // випадкове число між 0 і 1
-console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+  getTransactionDetails(id) {
+    for (const transaction of this.allTransactions) {
+      console.log();
+      if (transaction.id === id) {
+        console.log(transaction);
+      }
+    }
+  },
+
+  getTransactionTotal(type) {
+    let total = 0;
+    for (const transaction of this.allTransactions) {
+      console.log(transaction);
+      if (transaction.type === type) {
+        total += transaction.amount;
+      }
+    }
+    return total;
+  },
+};
+
+account.deposit(1000);
+account.deposit(1000);
+account.deposit(1000);
+account.deposit(1000);
+account.deposit(1000);
+account.deposit(1000);
+account.withdraw(1000);
+account.withdraw(2000);
+account.withdraw(1000);
+
+// account.getBalance();
+setTimeout(() => {}, 200);
+console.log(account);
+account.getTransactionDetails(1664136205658);
+console.log(account.getTransactionTotal(Operation.DEPOSIT));
+console.log(account.getTransactionTotal(Operation.WITHDRAW));
