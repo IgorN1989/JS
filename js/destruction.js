@@ -1,4 +1,4 @@
-// Task 1
+ // Task 1
 
 // function calcBMI({ weight, height }) {
 //   const numericWeight = Number(weight.replace(',', '.'));
