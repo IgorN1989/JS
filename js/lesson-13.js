@@ -1,6 +1,5 @@
 // ===========================  TASK 1  ==================================
 
-
 // const refs = {
 //     parent: document.querySelector("#parent"),
 //     child: document.querySelector("#child"),
@@ -10,7 +9,6 @@
 // refs.parent.addEventListener("click", onParentClick);
 // refs.child.addEventListener("click", onChildClick);
 // refs.innerChild.addEventListener("click", onInnerChildClick);
-
 
 // function onParentClick(e) {
 //     console.log("onParentClick");
@@ -30,9 +28,7 @@
 //     console.log("onInnerChildClick -> e.currentTarget", e.currentTarget);
 // }
 
-
 // ===========================  TASK 2  ==================================
-
 
 // const container = document.querySelector(".js-container");
 
@@ -45,9 +41,7 @@
 //     console.log(e.target.textContent);
 //     console.log(e.target.nodeName);
 
-
 // }
-
 
 // const addBtn = document.querySelector(".js-add-btn");
 // let labelCounter = 6;
@@ -63,9 +57,7 @@
 //     labelCounter += 1;
 // }
 
-
 // ===========================  TASK 3  ==================================
-
 
 // const tagsContainer = document.querySelector(".js-tags");
 // let selectedTags = null;
@@ -94,9 +86,7 @@
 //     console.log(selectedTags);
 // }
 
-
 // ===========================  TASK 4  ==================================
-
 
 // const tagsContainer = document.querySelector(".js-tags");
 // const selectedTags = new Set;
@@ -123,9 +113,7 @@
 //     console.log(selectedTags);
 // }
 
-
 // ===========================  TASK 5  ==================================
-
 
 // const colors = [
 //     { hex: "#f44336", rgb: "244,67,54" },
@@ -174,7 +162,7 @@
 //     if (!isColorSwatchEl) {
 //         return;
 //     }
-    
+
 //     const swatchEl = evt.target;
 //     const parentColorCard = swatchEl.closest(".color-card");
 
@@ -199,9 +187,7 @@
 //     document.body.style.backgroundColor = color;
 // }
 
-
 // ===========================  TASK 6  ==================================
-
 
 // const instruments = [
 //     {
@@ -259,7 +245,7 @@
 //         }
 
 //         // console.log(inBasket);
-        
+
 //         console.log(basket);
 //     }
 
@@ -271,57 +257,139 @@
 //         const currentIdx = Number(evt.target.closest("li").dataset.id);
 //         const idxInBasket = basket.findIndex(({ id }) => id === currentIdx);
 //         console.log(idxInBasket);
-        
+
 //         basket.splice(idxInBasket, 1);
 //         evt.target.setAttribute("disabled", true);
 //         console.log(basket);
 //     }
 // }
 
-
 // ===========================  TASK 7  ==================================
 
-// const content = document.querySelector(".content");
-// const restart = document.querySelector(".js-restart")
+const content = document.querySelector('.content');
+const restart = document.querySelector('.js-restart');
+content.insertAdjacentHTML('beforeend', createMarkup());
+content.addEventListener('click', onClick);
+restart.addEventListener('click', onRestart);
+const X_KEY = 'PlayerX';
+const O_KEY = 'PlayerO';
+let player = 'X';
+let stepX = JSON.parse(localStorage.getItem(X_KEY)) || [];
+let stepO = JSON.parse(localStorage.getItem(O_KEY)) || [];
 
-// let player = "X";
+const win = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7],
+];
 
-// const win = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [7, 8, 9],
-//     [1, 4, 7],
-//     [2, 5, 8],
-//     [3, 6, 9],
-//     [1, 5, 9],
-//     [3, 5, 7]
-// ];
+function startGame() {
+  [...content.children].forEach(item => {
+    const id = Number(item.dataset.id);
+    if (stepX.includes(id)) {
+      item.textContent = "X"; 
+    } else if (stepO.includes(id)) {
+      item.textContent = "O"; 
+    }
+  });
+}
+startGame()
 
-// function createMarkup() {
-//     let markup = "";
-//    for (let i = 1; i <= 9; i += 1) {
-//         markup +=`<div class="item" data-id=${i}></div>`
-//     } 
-//     return markup;
+function createMarkup() {
+  let markup = '';
+  for (let i = 1; i <= 9; i += 1) {
+    markup += `<div class="item" data-id=${i}></div>`;
+  }
+  return markup;
+}
+
+function onClick(evt) {
+  if (!evt.target.textContent) {
+    evt.target.textContent = player;
+    const id = Number(evt.target.dataset.id);
+    let result = false;
+    if (player === 'X') {
+      stepX.push(id);
+      localStorage.setItem(X_KEY, JSON.stringify(stepX));;
+      result = isWinner(stepX);
+    } else {
+      stepO.push(id);
+      localStorage.setItem(O_KEY, JSON.stringify(stepO));
+      result = isWinner(stepO);
+    }
+
+    setTimeout(() => {
+      if (result) {
+        alert(`Winner ${player}`);
+        onRestart();
+        return;
+      }
+      player = player === 'X' ? 'O' : 'X';
+    })
+  } else {
+    alert('Change!!!');
+  }
+}
+
+function isWinner(arr) {
+  return win.some(item => item.every(id => arr.includes(id)));
+}
+
+function onRestart() {
+  player = 'X';
+  stepX = [];
+  stepO = [];
+  localStorage.clear();
+  content.innerHTML = createMarkup();
+}
+
+// ===========================  l  ==================================
+
+// const session = document.querySelector('.session');
+// const local = document.querySelector('.local');
+// const remove = document.querySelector('.remove');
+// const arr = [1, 2, 3, 4, 5];
+
+// session.addEventListener('click', onSession);
+
+// // function onSession() {
+// //     const data = JSON.parse(localStorage.getItem("local")) || [];
+// //     data.forEach(element => { console.log(element) });
+// // }
+
+// function onSession() {
+//   try {
+//       const data = JSON.parse(localStorage.getItem('local'));
+//       if (!data) {
+//           throw new Error("Array is empty")
+//       }
+//       console.log(data);
+//     data.forEach(element => {
+//       console.log(element);
+//     });
+//   } catch (e) {
+//     console.log(e);
+//   } finally {
+//     console.log('world');
+//   }
 // }
 
-// content.insertAdjacentHTML("beforeend", createMarkup());
+// local.addEventListener('click', onLocal);
 
-// content.addEventListener("click", onClick);
-
-// restart.addEventListener("click", onRestart);
-
-// function onClick(evt) {
-//     if (!evt.target.textContent) {
-//     evt.target.textContent = player;
-
-//         player = player === "X" ? "O" : "X";
-//     } else {
-//         alert("Change!!!")
-//         }
+// function onLocal() {
+//   localStorage.setItem('local', JSON.stringify(arr));
+//   localStorage.setItem('local-1', JSON.stringify(arr));
+//   localStorage.setItem('local-2', JSON.stringify(arr));
 // }
 
-// function onRestart() {
-//     player = "X";
-//     content.innerHTML = createMarkup();
+// remove.addEventListener('click', onRemove);
+
+// function onRemove() {
+//   // localStorage.removeItem("message")
+//   localStorage.clear();
 // }

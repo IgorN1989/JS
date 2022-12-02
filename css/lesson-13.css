@@ -1,4 +1,6 @@
-#parent {
+/* ======================TASK 1========================== */
+
+/* #parent {
     width: 300px;
  
     padding: 20px;
@@ -20,9 +22,11 @@
     padding: 20px;
     background-color: rgb(11, 194, 226);
     border: 5px solid rgb(223, 107, 19);
-}
+} */
 
-.container {
+/* ======================TASK 2========================== */
+
+/* .container {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
@@ -35,9 +39,11 @@
     margin: 5px;
     padding: 5px;
     border: 3px solid green;
-}
+} */
 
-.tags {
+/* ======================TASK 3-4========================== */
+
+/* .tags {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -51,9 +57,11 @@
 .tags__btn-active {
     color: #fff;
     background-color: #3f51b5;
-}
+} */
 
-.palette {
+/* ======================TASK 5========================== */
+
+/* .palette {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -82,9 +90,11 @@
 .color-meta {
     padding: 10px;
     font-weight: 700;
-}
+} */
 
-.list {
+/* ======================TASK 6========================== */
+
+/* .list {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -94,7 +104,9 @@
 
 .list li {
     border: 2px solid red;
-}
+} */
+
+/* ======================TASK 7========================== */
 
 .container {
     display: flex;
@@ -103,7 +115,7 @@
 
 .content {
     width: 156px;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .item {
@@ -113,7 +125,7 @@
     text-align: center;
     display: inline-block;
     font-size: 25px;
-    border: 1px solid red;
+    border: 1px solid black;
     cursor: pointer;
     vertical-align: middle;
     transition: background .1s;
