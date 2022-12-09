@@ -1,100 +1,77 @@
-// console.log("До виклику setTimeout");
+// const date1 = Date.now();
+// console.log("date1:", date1);
 
 // setTimeout(() => {
-//     console.log("Всередені callback для setTimeout");
-// }, 2000);
+//     const date2 = Date.now();
+//     console.log("date1:", date1);
+//     console.log("date2:", date2);
 
-// console.log("Після виклику setTimeout");
+//     console.log(date2-date1);
+// }, 3000);
 
+// ===============================================
+const refs = {
+  startBtn: document.querySelector('button[data-action-start]'),
+  stopBtn: document.querySelector('button[data-action-stop]'),
+  clockface: document.querySelector('.js-clockface'),
+};
 
-// for (let index = 0; index < 10000; index++) {
-//     console.log(index);
-// }
+class Timer {
+  constructor({ onTick }) {
+    this.intervalId = null;
+    this.isActive = false;
+    this.onTick = onTick;
+    this.init();
+  }
 
-// const logger = time => {
-//     console.log(`Лог через ${time} ms, тому що не відмінили таймаут`);
-// };
+  init() {
+    const time = this.getTimeComponents(0);
+    this.onTick(time);
+  }
 
-// const timerId = setTimeout(logger, 2000, 2000);
-// console.log(timerId);
+  start() {
+    if (this.isActive) {
+      return;
+    }
 
-// const shouldCancelTimer = Math.random() > 0.3;
+    const startTime = Date.now();
+    this.isActive = true;
 
-// console.log(shouldCancelTimer);
+    this.intervalId = setInterval(() => {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - startTime;
+      const time = this.getTimeComponents(deltaTime);
+      this.onTick(time);
+    }, 1000);
+  }
 
-// if (shouldCancelTimer) {
-//     clearTimeout(timerId)
-// }
+  stop() {
+    clearInterval(this.intervalId);
+    this.isActive = false;
+    const time = this.getTimeComponents(0);
+    this.onTick(time);
+  }
 
+  getTimeComponents(time) {
+    const hours = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
 
-// ===========================  TASK  ==================================
+    return { hours, mins, secs };
+  }
 
-// const refs = {
-//     notification: document.querySelector(".js-alert"),
-// };
-
-// refs.notification.addEventListener("click", onNotificationClick);
-
-// showNotification();
-
-
-// function onNotificationClick() {
-//     hideNotification();
-// }
-
-// function showNotification() {
-//     refs.notification.classList.add("is-visible");
-// }
-
-// function hideNotification() {
-//     refs.notification.classList.remove("is-visible");
-// }
-
-// Налаштування
-// const recordCollection = {
-//   2548: {
-//     albumTitle: 'Slippery When Wet',
-//     artist: 'Bon Jovi',
-//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
-//   },
-//   2468: {
-//     albumTitle: '1999',
-//     artist: 'Prince',
-//     tracks: ['1999', 'Little Red Corvette']
-//   },
-//   1245: {
-//     artist: 'Robert Palmer',
-//     tracks: []
-//   },
-//   5439: {
-//     albumTitle: 'ABBA Gold'
-//   }
-// };
-
-// // Змініть код лише під цим рядком
-// function updateRecords(records, id, prop, value) {
-//     if (prop !== "tracks" && value !== "") {
-//         records[prop] = value;
-//     } else if (prop === "tracks" && !records.hasOwnProperty("tracks") {
-//         records[prop] = tracks
-//   }
-
-
-
-
-//   return records;
-// }
-
-// updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-
-function getExtremeElements(array) {
-
-  
-
-  // return array.splice(0, 1).concat(array.splice(array.length-1));
-
- 
-
+  pad(value) {
+    return String(value).padStart(2, '0');
+  }
 }
 
-console.log(getExtremeElements([1,2,3,4,5,6,7,8,9,10]));
+const timer = new Timer({
+  onTick: updateClockface,
+});
+
+refs.startBtn.addEventListener('click', timer.start.bind(timer));
+refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
+
+function updateClockface({ hours, mins, secs }) {
+  refs.clockface.textContent = `${hours}:${mins}:${secs}`;
+}

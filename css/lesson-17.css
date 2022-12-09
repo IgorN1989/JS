@@ -1,8 +1,23 @@
-.alert {
+.timer {
     display: flex;
-    padding: 15px;
-    width: 250px;
-    justify-content: center;
-    border: 2px solid blueviolet;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.clockface {
+    font-size: 100px;
+    font-family: oswald;
+}
+
+.timer-btn {
+    padding: 25px;
+    font-size: 30px;
+    font-family: oswald;
+    color: aliceblue;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.timer-btn:hover {
     background-color: aqua;
 }
