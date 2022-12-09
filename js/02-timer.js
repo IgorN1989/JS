@@ -1,4 +1,34 @@
+const refs = {
+  input: document.querySelector('#datetime-picker'),
+  startBtn: document.querySelector('button'),
+  days: document.querySelector('[data-days]'),
+  hours: document.querySelector('[data-hours]'),
+  minutes: document.querySelector('[data-minutes]'),
+  seconds: document.querySelector('[data-seconds]'),
+};
 
+refs.startBtn.disabled = true;
+
+refs.startBtn.addEventListener('click', onStartBtnClick);
+
+
+
+const options = {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    if (selectedDates[0] < new Date()) {
+      window.alert('Please choose a date in the future');
+      return;
+    }
+    refs.startBtn.disabled = false;
+    return selectedDates[0];
+  },
+};
+
+flatpickr(refs.input, options);
 
 // Якщо все ж таки через класс, то все має бути всередині класса)
 // Та в конструкторі отримайте посилання на рефи)
