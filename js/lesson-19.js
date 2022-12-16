@@ -1,15 +1,24 @@
-import pokemonCardTpl from '../templates/pokemon-card.hbs'
+// const r = fetch('https://pokeapi.co/api/v2/pokemon/2')
+//   .then(response => {
+//   return response.json();
+//   })
+//   .then(renderPokemonCard)
+//   .catch(error => {
+//     console.log(error);
+//   });
 
+// function renderPokemonCard(pokemon) {
+//   const markup = pokemonCardTpl(pokemon);
+//     requestAnimationFrame.cardContainer.innerHTML = markup;
+// }
 
-const r = fetch('https://pokeapi.co/api/v2/pokemon/2')
-  .then(response => {
-  return response.json();
-  })
-  .then(pokemon => {
-    console.log(pokemon);
-    const markup = pokemonCardTpl(pokemon);
-    console.log(markup);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+const url = 'https://newsapi.org/v2/everything?q=bitcoin';
+const options = {
+  headers: {
+    'X-Api-Key': '998da77ec83644b1a32a6a45028d130c'
+  }
+}
+
+fetch(url, options)
+  .then(response => response.json())
+  .then(console.log);
