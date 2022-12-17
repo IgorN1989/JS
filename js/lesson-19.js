@@ -12,13 +12,17 @@
 //     requestAnimationFrame.cardContainer.innerHTML = markup;
 // }
 
-const url = 'https://newsapi.org/v2/everything?q=bitcoin';
-const options = {
-  headers: {
-    'X-Api-Key': '998da77ec83644b1a32a6a45028d130c'
-  }
-}
+// const url = 'https://newsapi.org/v2/everything?q=bitcoin';
+// const options = {
+//   headers: {
+//     'X-Api-Key': '998da77ec83644b1a32a6a45028d130c'
+//   }
+// }
 
-fetch(url, options)
-  .then(response => response.json())
-  .then(console.log);
+// fetch(url, options)
+//   .then(response => response.json())
+//   .then(console.log);
+
+
+
+// ====================Weather API===================================
