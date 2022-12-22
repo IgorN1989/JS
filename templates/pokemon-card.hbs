@@ -9,9 +9,11 @@
         <p class="card-text">Height: {{height}}</p>
 
         <p class="card-text"><b>Abilities</b></p>
+        <ul class="list-group"></ul>
         {{#each abilities}}
-        <ul class="list-group">
+        
             <li class="list-group-item">{{ability.name}}</li>
+            {{/each}}
         </ul>
     </div>
 </div>
