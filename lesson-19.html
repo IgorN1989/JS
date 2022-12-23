@@ -8,7 +8,16 @@
   </head>
   <body>
     <p><a href="./">На головну</a></p>
-
+    <form action="submit" class="js-search">
+      <input type="text" name="query" />
+      <select name="days">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+    <ul class="list"></ul>
     <script src="./js/lesson-19.js" type="module"></script>
   </body>
 </html>
