@@ -1,15 +1,15 @@
-const source = document.getElementById('entry-template').innerHTML;
-const pokemonCardTpl = Handlebars.compile(source);
-
-const r = fetch('https://pokeapi.co/api/v2/pokemon/2')
-  .then(response => {
-    return response.json();
-  })
-  .then(pokemon => {
-    console.log(pokemon);
-    const markup = pokemonCardTpl(pokemon);
-    console.log(markup);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+const BASE_URL = 'http://api.weatherapi.com/v1/forecast.json';
+const API_KEY = 'c13ad7f0b65643a3977102428221712';
+function forecastApi(name = 'Kiev') {
+  fetch(`${BASE_URL}?key=${API_KEY}&q=${name}&days=7`)
+    .then(resp => {
+      // console.log(resp);
+      if (!resp.ok) {
+        throw new Error(resp.statusText);
+      }
+      return resp.json();
+    })
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+}
+forecastApi();

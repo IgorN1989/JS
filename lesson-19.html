@@ -8,29 +8,7 @@
   </head>
   <body>
     <p><a href="./">На головну</a></p>
-    <script id="entry-template" type="text/x-handlebars-template"></script>
-<div class="card">
-    <div>
-        <img src="{{sprites.front_default
-}}" alt="{{name}}" />
-    </div>
-    <div class="card-body">
-        <h2 class="card-title">Name: {{name}}</h2>
-        <p class="card-text">Weight: {{weight}}</p>
-        <p class="card-text">Height: {{height}}</p>
 
-        <p class="card-text"><b>Abilities</b></p>
-        <ul class="list-group"></ul>
-        {{#each abilities}}
-        
-            <li class="list-group-item">{{ability.name}}</li>
-            {{/each}}
-        </ul>
-    </div>
-</div>
-</script>
-
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/lib/index.min.js"></script>
     <script src="./js/lesson-19.js" type="module"></script>
   </body>
 </html>
