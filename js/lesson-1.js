@@ -208,6 +208,68 @@
 
 // REPETA
 
+// const valueB = "5.3";
+// console.log(Number(valueB)); // NaN
+// console.log(typeof Number(valueB));
+
+
+// Практика
+
+// Виведіть на екран загальну кількість яблук і винограду. Різницю яблук та вінограду.
+// const apples = 47;
+// const grapes = 135;
+// const total = apples + grapes;
+// console.log(total);
+// const diff = grapes- apples;
+// console.log(diff);
+
+// let students = 100;
+// students += 50;
+// console.log(students);
+
+// const value = 27.5;
+// console.log(Math.floor(value));
+// console.log(Math.ceil(value));
+// console.log((Math.round(value)));
+
+
+// const companyName = "Cyberdine Systems";
+// const repairBots = 150;
+// const defenceBots = 50;
+// const message = `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// console.log(message);
+
+// let weight = '88,3';
+// let height = '1.75';
+
+// weight = Number(weight.replace(',', '.'));
+// console.log(weight);
+
+// height = Number(height.replace(',', '.'));
+// console.log(height);
+
+// const bmi = (weight / Math.pow(height, 2)).toFixed(1);
+// console.log(bmi);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
