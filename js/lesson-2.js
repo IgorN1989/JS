@@ -274,24 +274,52 @@
 
 // ====================================================================
 
-const minSalary = 500;
-const maxSalary = 5000;
+// const minSalary = 500;
+// const maxSalary = 5000;
 
-const employees = 5;
-let totalSalary = 0;
+// const employees = 5;
+// let totalSalary = 0;
 
-for (let i = 1; i <= employees; i += 1) {
-    const salary = Math.round(
-        Math.random() * (maxSalary - minSalary) + minSalary);
-    console.log(`Salare of worker ${i} - ${salary}`);
-    totalSalary += salary;
-}
+// for (let i = 1; i <= employees; i += 1) {
+//     const salary = Math.round(
+//         Math.random() * (maxSalary - minSalary) + minSalary);
+//     console.log(`Salare of worker ${i} - ${salary}`);
+//     totalSalary += salary;
+// }
 
-console.log(totalSalary);
+// console.log(totalSalary);
+
+// ====================================================================
+
+// const min = 6;
+// const max = 13;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//     if (i % 2 !== 0) {
+//         continue;
+//     }
+//     console.log("парне:", i);
+//         total += i;
+// }
+
+// console.log("total:", total);
 
 // ====================================================================
 
-// ====================================================================
+// let balance = 10000;
+// const payment = 2000;
+
+// console.log(`Загальна вартість замовлення ${payment} гривень. Перевіряємо кількість доступних коштів на рахунку`);
+
+// if (balance >= payment) {
+//     console.log("ok");
+//     balance -= payment;
+// } else {
+//     console.log('Недостатньо коштів');
+// }
+
+// console.log('Баланс:', balance);
 
 // ====================================================================
 
