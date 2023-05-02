@@ -220,7 +220,7 @@
 // const grapes = 135;
 // const total = apples + grapes;
 // console.log(total);
-// const diff = grapes- apples;
+// const diff = grapes - apples;
 // console.log(diff);
 
 // let students = 100;
