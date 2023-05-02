@@ -387,14 +387,90 @@
 
 // ====================================================================
 
-let link = 'https://somesite.com/about';
+// let link = 'https://somesite.com/about';
 
-// console.log(link[link.length-1)];
+// console.log(link.endsWith('/'));
+// console.log(link.slice(link.length - 1));
+
+// if (!link.endsWith('/')) {
+//     link = `${link}/`
+//     link += '/';
+// }
+// console.log(link.slice(link.length - 1));
+// console.log(link);
+// console.log(link[link.length-1]==='/');
 
 // ====================================================================
 
-// ====================================================================
+// const days = Number(prompt('Enter days'));
+
+// console.log(days);
+
+// if (days === 0) {
+//     console.log("Сьогодні");
+// } else if (days === 1) {
+//     console.log("Завтра");
+// } else if (days === 2) {
+//     console.log("Післязавтра");
+// } else {
+//     console.log("Дата в майбутньому");
+// }
 
 // ====================================================================
 
+// const days = Number(prompt('Enter days'));
+
+// switch (days) {
+//   case 0:
+//     console.log('Сьогодні');
+//     break;
+
+//   case 1:
+//     console.log('Завтра');
+//     break;
+
+//   case 2:
+//     console.log('Післязавтра');
+//     break;
+
+//   default:
+//     console.log('Дата в майбутньому');
+// }
+
 // ====================================================================
+
+// const max = 100;
+// const min = 20;
+ 
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// ====================================================================
+
+// const color = prompt("Enter color").toLowerCase();
+
+// switch (color) {
+//     case 'red':
+//         alert('STOP!!!')
+//         break;
+    
+//     case 'yellow':
+//         alert('READY')
+//         break;
+    
+//     case 'green':
+//         alert('GO!')
+//         break;
+    
+//     default:
+//         alert('Not working')
+// }
+// console.log(color);
+
+// ====================================================================
+
+const test = prompt('hhhh')
+console.dir(test);
