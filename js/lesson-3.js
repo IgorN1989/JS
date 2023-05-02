@@ -170,14 +170,21 @@
 
 // ====================================================================
 
-const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
-const newClients = ["Monkong", "Singu"];
+// const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// const newClients = ["Monkong", "Singu"];
 
-const allClientsWithOldFirst = oldClients.concat(newClients);
-console.log(allClientsWithOldFirst);
+// const allClientsWithOldFirst = oldClients.concat(newClients);
+// console.log(allClientsWithOldFirst);
 
-const allClientsWithNewFirst = newClients.concat(oldClients);
-console.log(allClientsWithNewFirst);
+// const allClientsWithNewFirst = newClients.concat(oldClients);
+// console.log(allClientsWithNewFirst);
 
-console.log(oldClients);
-console.log(newClients);
+// console.log(oldClients);
+// console.log(newClients);
+
+
+// ====================================================================
+
+// Repeta
+
+// ====================================================================
