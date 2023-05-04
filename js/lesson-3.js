@@ -134,7 +134,6 @@
 // console.log((numbers.shift()));
 // console.log(numbers);
 
-
 // ====================================================================
 
 // const clients = ['Mango', 'Poly', 'Ajax', 'Kiwi'];
@@ -182,9 +181,131 @@
 // console.log(oldClients);
 // console.log(newClients);
 
-
 // ====================================================================
 
 // Repeta
+
+// ====================================================================
+
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// console.log(friends);
+// console.table(friends);
+
+// ====================================================================
+
+// const cart = [54, 28, 105, 70, 92, 17, 120];
+// let total = 0;
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   // console.log(cart[i]);
+//   total += cart[i];
+// }
+
+// console.log(total);
+
+// ====================================================================
+
+// const cart = [54, 28, 105, 70, 92, 17, 120];
+// let total = 0;
+
+// for (const item of cart) {
+//     total += item;
+// }
+
+// console.log(total);
+
+// ====================================================================
+
+// const cart = [54, 28, 105, 70, 92, 17, 120];
+// let total = 0;
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   cart[i] = Math.round(cart[i] * 1.1);
+//   total += cart[i];
+// }
+
+// console.log(total);
+
+// ====================================================================
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+// let total = 0;
+
+// for (const number of numbers) {
+//   if (number % 2 !== 0) {
+//     continue;
+//     }
+
+//   total += number;
+// }
+
+// console.log(total);
+
+// ====================================================================
+
+// const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// const loginToFind = 'Poly';
+// let message = `Користувач ${loginToFind} не знайден`;
+
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+
+//   if (login === loginToFind) {
+//     message = `Користувач ${loginToFind} знайден`;
+//     break;
+//   }
+// }
+
+// console.log(message);
+
+// ====================================================================
+
+// const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// const loginToFind = 'Poly';
+// let message = `Користувач ${loginToFind} не знайден`;
+
+// for (const login of logins) {
+
+//   if (login === loginToFind) {
+//     message = `Користувач ${loginToFind} знайден`;
+//     break;
+//   }
+// }
+
+// console.log(message);
+
+// ====================================================================
+
+// const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// const loginToFind = 'Poly';
+
+// const message = logins.includes(loginToFind)
+//   ? `Користувач ${loginToFind} знайден`
+//   : `Користувач ${loginToFind} не знайден`;
+
+// console.log(message);
+
+// ====================================================================
+
+const numbers = [51, 18, 13, 24, 7, 85, 19];
+let smallestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number < smallestNumber) {
+    smallestNumber = number;
+  }
+}
+
+console.log(smallestNumber);
+
+// ====================================================================
+
+// ====================================================================
+
+// ====================================================================
+
+// ====================================================================
+
+// ====================================================================
 
 // ====================================================================
