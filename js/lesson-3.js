@@ -402,7 +402,38 @@
 
 
 // ====================================================================
+
+// const genres = ['Jazz', 'Blues'];
+
+// genres.push("Rock'n'Roll");
+// console.log(genres);
+
+// const firstEl = genres[0];
+// console.log(firstEl);
+
+// const lastEl = genres[genres.length - 1];
+// console.log(lastEl);
+
+// const deleteFirstEl = genres.shift();
+// console.log(deleteFirstEl);
+// console.log(genres);
+
+// genres.unshift('Country', 'Reggae');
+// console.log(genres);
+
 // ====================================================================
+
+const genres = ['Jazz', 'Blues'];
+
+genres.splice(genres.length, 0, "Rock'n'Roll");
+console.log(genres);
+
+genres.splice(0,1);
+console.log(genres);
+
+genres.splice(genres.length, 0, 'Country', 'Reggae');
+console.log(genres);
+
 // ====================================================================
 // ====================================================================
 
