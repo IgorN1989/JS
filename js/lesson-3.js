@@ -423,17 +423,29 @@
 
 // ====================================================================
 
-const genres = ['Jazz', 'Blues'];
+// const genres = ['Jazz', 'Blues'];
 
-genres.splice(genres.length, 0, "Rock'n'Roll");
-console.log(genres);
+// genres.splice(genres.length, 0, "Rock'n'Roll");
+// console.log(genres);
 
-genres.splice(0,1);
-console.log(genres);
+// genres.splice(0,1);
+// console.log(genres);
 
-genres.splice(genres.length, 0, 'Country', 'Reggae');
-console.log(genres);
+// genres.splice(genres.length, 0, 'Country', 'Reggae');
+// console.log(genres);
 
 // ====================================================================
+
+// const values = '8 11';
+// const arr = values.split(' ');
+// const firstValue = Number(arr[0]);
+// const lastValue = Number(arr[arr.length-1]);
+// console.log(arr);
+// console.log(firstValue);
+// console.log(lastValue);
+
+// const area = firstValue * lastValue;
+// console.log(area);
+
 // ====================================================================
 
