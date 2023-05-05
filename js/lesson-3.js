@@ -449,3 +449,18 @@
 
 // ====================================================================
 
+// let value = Number('8');
+// console.log(value);
+// console.log(typeof value);
+// console.log(isNaN(value));
+// console.log(Number.isNaN(value));
+
+const values = 'asd 11';
+const arr = values.split(' ');
+const firstEl = Number(arr[0]);
+
+
+console.log(Number.isNaN(firstEl));
+console.log(isNaN(firstEl));
+console.log(firstEl);
+console.log(typeof firstEl);
