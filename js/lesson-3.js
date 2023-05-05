@@ -287,25 +287,122 @@
 
 // ====================================================================
 
-const numbers = [51, 18, 13, 24, 7, 85, 19];
-let smallestNumber = numbers[0];
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
 
-for (const number of numbers) {
-  if (number < smallestNumber) {
-    smallestNumber = number;
-  }
-}
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
 
-console.log(smallestNumber);
-
-// ====================================================================
+// console.log(smallestNumber);
 
 // ====================================================================
 
-// ====================================================================
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// let string = '';
+
+// for (const friend of friends) {
+//   string += friend + ', ';
+// }
+
+// string = string.slice(0, string.length - 2);
+
+// console.log(string);
 
 // ====================================================================
 
-// ====================================================================
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// const string = friends.join(', ')
+
+// console.log(string);
 
 // ====================================================================
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+
+// // console.log(letters);
+
+// for (const letter of letters) {
+//   // console.log(letter);
+
+//   if (letter === letter.toLowerCase()) {
+//     invertedString += letter.toUpperCase()
+//   } else {
+//     invertedString += letter.toLowerCase()
+//   }
+// }
+
+// console.log(invertedString);
+
+// ====================================================================
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+
+// for (const letter of letters) {
+//   invertedString += letter === letter.toLowerCase()
+//     ? letter.toUpperCase()
+//     : letter.toLowerCase();
+// }
+
+// console.log(invertedString);
+
+// ====================================================================
+
+// const title = 'Top 10 benefits of React framefork';
+// const normaliziedTitle = title.toLowerCase();
+// const words = normaliziedTitle.split(' ');
+// const slug = words.join('-');
+
+// console.log(slug);
+
+// // OR
+
+// const slug1 = title.toLowerCase().split(' ').join('-');
+// console.log(slug1);
+
+// ====================================================================
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+
+// const numbers = array1.concat(array2);
+
+// for (const number of numbers) {
+//   total += number;
+// }
+
+// console.log(total);
+
+// ====================================================================
+
+// const cards = ['Card-1', 'Card-2', 'Card-3', 'Card-4', 'Card-5'];
+
+// const cardToRemove = 'Card-3';
+// const indexToRemove = cards.indexOf(cardToRemove);
+// cards.splice(indexToRemove, 1);
+// console.table(cards);
+
+// const cardToInsert = 'Card-6';
+// const indexToInsert = 3;
+// cards.splice(3, 0, cardToInsert)
+// console.table(cards);
+
+// const cardToUpdate = 'Card-4';
+// const indexToUpdate = cards.indexOf(cardToUpdate);
+// const newCard = 'Updated Card-4'
+// cards.splice(indexToUpdate, 1, newCard);
+// console.table(cards);
+
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
