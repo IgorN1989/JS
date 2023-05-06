@@ -400,7 +400,6 @@
 // cards.splice(indexToUpdate, 1, newCard);
 // console.table(cards);
 
-
 // ====================================================================
 
 // const genres = ['Jazz', 'Blues'];
@@ -455,12 +454,121 @@
 // console.log(isNaN(value));
 // console.log(Number.isNaN(value));
 
-const values = 'asd 11';
-const arr = values.split(' ');
-const firstEl = Number(arr[0]);
+// const values = 'asd 11';
+// const arr = values.split(' ');
+// const firstEl = Number(arr[0]);
 
+// console.log(Number.isNaN(firstEl));
+// console.log(isNaN(firstEl));
+// console.log(firstEl);
+// console.log(typeof firstEl);
 
-console.log(Number.isNaN(firstEl));
-console.log(isNaN(firstEl));
-console.log(firstEl);
-console.log(typeof firstEl);
+// ====================================================================
+
+// const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//     console.log(`Порядковий номер ${i+1}:`, fruits[i]);
+// }
+
+// for (let i = 0, num =1; i < fruits.length; i += 1, num +=1) {
+//     console.log(`Порядковий номер ${num}:`, fruits[i]);
+// }
+
+// ====================================================================
+
+// const names = 'Jacob,William,Solomon,Kate';
+// const phones = '89001234567,89001112233,890055566377';
+
+// const arrNames = names.split(',');
+// const arrPhones = phones.split(',');
+// console.log(arrNames);
+// console.log(arrPhones);
+
+// for (let i = 0; i < arrNames.length; i += 1) {
+//     console.log(`Ім'я: ${arrNames[i]} - номер телефону:${arrPhones[i]}`);
+// }
+
+// for (let i = 0; i < arrNames.length, i < arrPhones.length; i += 1) {
+//     console.log(arrNames[i], '-', arrPhones[i]);
+// }
+
+// ====================================================================
+
+// const string = "Welcome to the future!";
+// const words = string.split(' ');
+// console.log(words);
+
+// words.shift()
+// console.log(words);
+
+// words.pop();
+// console.log(words);
+
+// const newString = words.join(' ');
+// console.log(newString);
+
+// ====================================================================
+
+// const string = "Welcome to the future!";
+// const words = string.split(' ');
+// console.log(words);
+
+// words.splice(0, 1);
+// console.log(words);
+
+// words.splice(words.length-1,1)
+// // words.splice(-1, 1);
+// console.log(words);
+
+// ====================================================================
+
+// const string = 'Welcome to the future!';
+
+// const arr = string.split('');
+// console.log(arr);
+
+// const revArr = arr.reverse();
+// console.log(revArr);
+
+// const result = revArr.join(' ');
+// console.log(result);
+
+// ====================================================================
+
+// const string = 'Welcome to the future!';
+
+// const result = string.split('').reverse().join(' ');
+// console.log(result);
+
+// ====================================================================
+
+// const numbers = [101, 78, 12, 76, 5, 11, 9];
+// let smallestNumber = numbers[0];
+
+// for (let i = 0; i < numbers.length; i +=1) {
+//     if (smallestNumber < numbers[i]) {
+//         continue;
+//     } else {
+//         smallestNumber = numbers[i];
+//     }
+// }
+
+// console.log(smallestNumber);
+
+// ====================================================================
+
+// const numbers = [101, 78, 12, 76, 5, 11, 9];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (smallestNumber > number) {
+//     smallestNumber = number;
+//   }
+// }
+
+// console.log(smallestNumber);
+
+// ====================================================================
+
+// ====================================================================
