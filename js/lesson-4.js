@@ -477,15 +477,98 @@
 
 // ====================================================================
 
-// const numbers = [51, 18, 13, 24, 7, 85, 19];
-// let smallestNumber = numbers[0];
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
 
-// for (const number of numbers) {
-//   if (number < smallestNumber) {
-//     smallestNumber = number;
+//   for (const number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
 //   }
-// }
+//   return smallestNumber;
+// };
 
-// console.log(smallestNumber);
+// console.log(findSmallestNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallestNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallestNumber([7, 21, 84, 15, 4]));
 
 // ====================================================================
+
+// const changeCase = function (string) {
+//   const letters = string.split('');
+//   console.log(letters);
+//   let invertedString = '';
+
+//   for (const letter of letters) {
+//     const isInLowerCase = letter === letter.toLowerCase();
+//     invertedString += isInLowerCase ? letter.toUpperCase() : letter.toLowerCase();
+//   }
+
+//   return invertedString;
+// };
+
+// console.log(changeCase('qweRTY'));
+// console.log(changeCase('mAnGo'));
+// console.log(changeCase('AjAx'));
+
+// ====================================================================
+
+// const slugify = function (string) {
+//     // const normaliziedTitle = string.toLowerCase();
+//     // const words = normaliziedTitle.split(' ');
+//     // const slug = words.join('-');
+
+//     // return slug;
+
+//     return string.toLowerCase().split(' ').join('-');
+// }
+
+// console.log(slugify('Top 10 benefits of React framefork'));
+// console.log(slugify('Azure Static Web Apps are Awesome'));
+// console.log(slugify('Technical writting tips for non-native English speakers'));
+
+// ====================================================================
+
+// const fn = function (...args) {
+//   console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// ====================================================================
+
+// const add = function (...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+
+//   return total;
+// };
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5, 6));
+
+// ====================================================================
+
+// const filterNumbers = function (array, ...args) {
+//   // console.log(array);
+//   // console.log(args);
+
+//   const notUniqueElements = [];
+
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       notUniqueElements.push(element);
+//       //   console.log(`${element} is everywhere`);
+//     }
+//   }
+//   return notUniqueElements;
+// };
+
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64));
