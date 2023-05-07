@@ -23,7 +23,6 @@
 //   return x - y;
 // });
 
-
 // const filter = function (array, test) {
 //     const filteredArray = []
 
@@ -53,7 +52,6 @@
 // const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8, 9], callback2);
 
 // console.log(r2);
-
 
 // const fruits = [
 //     { name: "apples", quantity: 200, isFresh: true },
@@ -112,8 +110,6 @@
 // mango("meat");
 // mango("rabbit");
 
-
-
 // const add = function(a, b, c) {
 //     console.log(arguments);
 //     return a + b + c;
@@ -128,7 +124,6 @@
 
 // console.log(addArrow(5,10,15));
 
-
 // const fnA = function () {
 //     return {
 //         a: 5,
@@ -137,11 +132,9 @@
 
 // console.log(fnA());
 
-
 // const arrowFnA = () => ({arrowA: 5,});
 
 // console.log(arrowFnA());
-
 
 // const filter = function (array, test) {
 //     const filteredArray = []
@@ -169,7 +162,6 @@
 
 // console.log(r2);
 
-
 // const fruits = [
 //     { name: "apples", quantity: 200, isFresh: true },
 //     { name: "grapes", quantity: 150, isFresh: false },
@@ -185,7 +177,6 @@
 // const logger = msg => console.log(msg);
 
 // console.log(logger);
-
 
 // function add(a, b) {
 //     return a + b;
@@ -210,7 +201,6 @@
 //     console.log(result);
 // }
 
-
 // foo(arr, add);
 // foo(arr, logger);
 
@@ -220,7 +210,7 @@
 // }
 
 // let i = 0;
- 
+
 // function createProduct(partialProduct, callback) {
 //     i += 1;
 //     const object = {
@@ -235,7 +225,7 @@
 // }
 
 // function logTotalPrice(product) {
-    
+
 //     console.log(product.price * product.quantity);
 // }
 
@@ -307,7 +297,6 @@
 // account.deposit(600, handleSuccess, handleError);
 // account.withdraw(300, handleSuccess, handleError);
 
-
 // function each(array, callback) {
 //     for (const element of array) {
 //        console.log(callback(element));
@@ -334,8 +323,6 @@
 //     return Math.floor(value);
 // });
 
-
-
 // function foo (value) {
 //     return value * 2;
 // }
@@ -350,7 +337,6 @@
 
 // boo({name: "User"})
 
-
 // const boo = (value) => value * 2;
 
 // boo(4)
@@ -363,7 +349,6 @@
 // };
 
 // boo(4,1,2,3,6)
-
 
 // function createProduct(partialProduct, callback) {
 //     const product = {
@@ -397,12 +382,110 @@
 //     quantity: 5,
 // }, logProduct);
 
-
 // const createProduct = (partialProduct, callback) => ({id: Date.now(), ...partialProduct});
-
 
 // console.log(createProduct({
 //     name: "apple",
 //     price: 30,
 //     quantity: 3,
 // }));
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
+// function multiply() {
+//   console.log('Це лог на момент виклику функції multiply');
+// }
+
+// multiply();
+
+// ====================================================================
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+
+// for (const value of cart) {
+//     total += value;
+// }
+
+// console.log('Total:', total);
+
+// const calculateTotalPrice = function (items) {
+//     console.log('items всередені функції:', items);
+
+//     let total = 0;
+
+//     for (const item of items) {
+//         total += item;
+//     }
+
+//     return total;
+// }
+
+// console.log((calculateTotalPrice([1, 2, 3])));
+// console.log((calculateTotalPrice([5, 10, 15, 20])));
+// console.log((calculateTotalPrice([100, 200, 300])));
+
+// ====================================================================
+
+// const logItems = function (items) {
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// };
+
+// logItems(['Mango', 'Kiwi', 'Poly', 'Ajax']);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(['keyboard', 'headphones', 'watch']);
+
+// ====================================================================
+
+// const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//   for (const login of allLogins) {
+//     if (login === loginToFind) {
+//       return `Користувач ${loginToFind} знайден`;
+//     }
+//   }
+//   return `Користувач ${loginToFind} не знайден`;
+// };
+
+// console.log(findLogin(logins, 'Avoc'));
+// console.log(findLogin(logins, 'Kiwi'));
+// console.log(findLogin(logins, 'Jaml'));
+// console.log(findLogin(logins, 'Poly'));
+
+// ====================================================================
+
+// const logins = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//   return logins.includes(loginToFind)
+//     ? `Користувач ${loginToFind} знайден`
+//     : `Користувач ${loginToFind} не знайден`;
+// };
+
+// console.log(findLogin(logins, 'Avoc'));
+// console.log(findLogin(logins, 'Kiwi'));
+// console.log(findLogin(logins, 'Jaml'));
+// console.log(findLogin(logins, 'Poly'));
+
+// ====================================================================
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
+
+// console.log(smallestNumber);
+
+// ====================================================================
