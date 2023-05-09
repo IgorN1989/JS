@@ -587,33 +587,102 @@
 
 // ====================================================================
 
-const foo = function (param) {
-    console.log(param);
+// const foo = function (param) {
+//     console.log(param);
+// }
+// console.log(foo);
+// foo();
+// foo('hello')
+
+// ====================================================================
+
+// function getSum() {
+//   console.log(arguments);
+
+//   const arr = Array.from(arguments);
+//   console.log('arr', arr);
+
+//   const arr2 = [...arguments];
+//   console.log('arr2', arr2);
+
+//   let total = 0;
+//   for (const argument of arguments) {
+//     total += argument;
+//   }
+//   return total;
+// }
+
+// console.log(getSum(1, 2, 3, 4, 5, 6, 7, 8));
+// console.log(getSum(44, 5, 14, 3));
+
+// ====================================================================
+
+// function foo() {
+//   console.log('start foo');
+// }
+
+// function boo() {
+//   console.log('start boo');
+//   foo();
+//   console.log('end boo');
+// }
+
+// boo();
+
+// ====================================================================
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
+
+// function addCourse(name) {
+//   if (!courses.includes(name)) {
+//     courses.push(name);
+//     return;
+//   }
+//   return 'Ви вже маєте даний курс';
+// }
+
+// const res = addCourse('Express');
+// console.log(res);
+// console.log(courses);
+// const result = addCourse('CSS');
+// console.log(result);
+
+// ====================================================================
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
+
+// function removeCourse(name) {
+//   if (courses.includes(name)) {
+//     const idx = courses.indexOf(name);
+//     courses.splice(idx, 1);
+//     return `Курс ${name} успішно видалено`;
+//   }
+
+//   return 'Курс з такою назвою не знайдено';
+// }
+
+// console.log(removeCourse('React'));
+// console.log(courses);
+// console.log(removeCourse('Vue'));
+
+// ====================================================================
+
+const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'Express'];
+
+function updateCourse(oldName, newName) {
+  if (courses.includes(oldName)) {
+    const idx = courses.indexOf(oldName);
+    // courses.splice(idx, 1, newName);
+    courses[idx] = newName;
+    return `${oldName} замінено на ${newName}`;
+  }
+  return 'Курс з такою назвою не знайдено';
 }
-console.log(foo);
-foo();
-foo('hello')
+
+console.log(updateCourse('Express', 'NestJS'));
+console.log(courses);
+console.log(updateCourse('Angular', 'NestJS'));
 
 // ====================================================================
-
-
-
-// ====================================================================
-
-
-// ====================================================================
-
-
-// ====================================================================
-
-
-
-// ====================================================================
-
-
-
-// ====================================================================
-
-
 
 // ====================================================================
