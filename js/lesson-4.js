@@ -599,11 +599,11 @@
 // function getSum() {
 //   console.log(arguments);
 
-//   const arr = Array.from(arguments);
-//   console.log('arr', arr);
+//   // const arr = Array.from(arguments);
+//   // console.log('arr', arr);
 
-//   const arr2 = [...arguments];
-//   console.log('arr2', arr2);
+//   // const arr2 = [...arguments];
+//   // console.log('arr2', arr2);
 
 //   let total = 0;
 //   for (const argument of arguments) {
@@ -667,22 +667,22 @@
 
 // ====================================================================
 
-const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'Express'];
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'Express'];
 
-function updateCourse(oldName, newName) {
-  if (courses.includes(oldName)) {
-    const idx = courses.indexOf(oldName);
-    // courses.splice(idx, 1, newName);
-    courses[idx] = newName;
-    return `${oldName} замінено на ${newName}`;
-  }
-  return 'Курс з такою назвою не знайдено';
-}
+// function updateCourse(oldName, newName) {
+//   if (courses.includes(oldName)) {
+//     const idx = courses.indexOf(oldName);
+//     // courses.splice(idx, 1, newName);
+//     courses[idx] = newName;
+//     return `${oldName} замінено на ${newName}`;
+//   }
+//   return 'Курс з такою назвою не знайдено';
+// }
 
-console.log(updateCourse('Express', 'NestJS'));
-console.log(courses);
-console.log(updateCourse('Angular', 'NestJS'));
-
-// ====================================================================
+// console.log(updateCourse('Express', 'NestJS'));
+// console.log(courses);
+// console.log(updateCourse('Angular', 'NestJS'));
 
 // ====================================================================
+
+ 
