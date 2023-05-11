@@ -92,12 +92,53 @@
 
 // ====================================================================
 
-let userInput = Number(prompt('Введіть число'));
-let total = 0;
+// let userInput = Number(prompt('Введіть число'));
+// let total = 0;
 
-while (userInput !== 0) {
-    total += userInput;
-    userInput = Number(prompt('Введіть число'));
-}
-alert(`Загальна сума введених чисел дорівнює ${total}`);
-console.log(`Загальна сума введених чисел дорівнює ${total}`);
+// while (userInput !== 0) {
+//     total += userInput;
+//     userInput = Number(prompt('Введіть число'));
+// }
+// alert(`Загальна сума введених чисел дорівнює ${total}`);
+// console.log(`Загальна сума введених чисел дорівнює ${total}`);
+
+// ====================================================================
+
+// У змінній min дежить число від 0 до 59. Визначити в яку чверть години потрапляє це число.
+
+// const min = Math.round(Math.random() * (59 - 0) + 0);
+// console.log(min);
+
+// if (min >= 0 && min < 15) {
+//     console.log(`Число ${min} в 1 чверті`);
+// } else if (min >= 15 && min < 30) {
+//     console.log(`Число ${min} в 2 чверті`);
+// } else if (min >= 30 && min < 45) {
+//     console.log(`Число ${min} в 3 чверті`)
+// } else {
+//     console.log(`Число ${min} в 4 чверті`)
+// }
+
+// ====================================================================
+
+// const min = Math.round(Math.random() * (59 - 0) + 0);
+// console.log(min);
+
+// switch (true) {
+//   case (min >= 0 && min < 15):
+//     console.log('Число в 1 чверті');
+//     break;
+
+//   case (min >= 15 && min < 30):
+//     console.log('Число в 2 чверті');
+//     break;
+
+//   case (min >= 30 && min < 45):
+//     console.log('Число в 3 чверті');
+//     break;
+
+//   default:
+//     console.log('Число в 4 чверті');
+// }
+
+// ====================================================================
