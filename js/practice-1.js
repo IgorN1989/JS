@@ -170,3 +170,16 @@
 // }
 
 // ====================================================================
+
+// const string = 'abcde';
+
+// if (string[0] === 'a') {
+//     console.log("так");
+// } else {
+//     console.log("ні");
+// }
+
+// const string = 'kkkabcde';
+// const message = string.startsWith('a') ? "так" : "ні";
+
+// console.log(message);
