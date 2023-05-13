@@ -285,13 +285,52 @@ for (const friend of friends) {
 
 // console.table(friends);
 
-const findFriendByName = function (allFriends, name) {
-  for (const friend of allFriends) {
-    if (friend.name === name) {
-      return 'FIND!!!';
-    }
-  }
-};
+// const findFriendByName = function (allFriends, nameToFind) {
+//   for (const friend of allFriends) {
+//     if (friend.name === nameToFind) {
+//       return `FIND ${nameToFind}!!!`;
+//     }
+//   }
 
-console.log(findFriendByName(friends, 'Poly'));
-console.log(findFriendByName(friends, 'Chelsy'));
+//   return `Not find ${nameToFind}`;
+// };
+
+// console.log(findFriendByName(friends, 'Poly'));
+// console.log(findFriendByName(friends, 'Chelsy'));
+
+// const getAllNames = function (allFriends) {
+//   const names = [];
+
+//   for (const friend of friends) {
+//     names.push(friend.name);
+//   }
+//   return names;
+// };
+
+// console.log(getAllNames(friends));
+
+// const getOnlineFriends = function (allFriends) {
+//   const onlineFriends = [];
+
+//   for (const friend of friends) {
+//     if (friend.online) {
+//       onlineFriends.push(friend);
+//     }
+//   }
+//   return onlineFriends;
+// };
+
+// console.log(getOnlineFriends(friends));
+
+// const getOfflineFriends = function (allFriends) {
+//     const offlineFriends = [];
+
+//   for (const friend of friends) {
+//     if (!friend.online) {
+//       offlineFriends.push(friend);
+//     }
+//   }
+//   return offlineFriends;
+// };
+
+// console.log(getOfflineFriends(friends));
