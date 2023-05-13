@@ -266,94 +266,118 @@
 
 // ====================================================================
 
-const friends = [
-  { name: 'Mango', online: false },
-  { name: 'Kiwi', online: true },
-  { name: 'Poly', online: true },
-  { name: 'Ajax', online: false },
-];
+// const friends = [
+//   { name: 'Mango', online: false },
+//   { name: 'Kiwi', online: true },
+//   { name: 'Poly', online: true },
+//   { name: 'Ajax', online: false },
+// ];
 
-// console.table(friends);
+// // console.table(friends);
 
-for (const friend of friends) {
-  // console.log(friend);
-  // console.log(friend.name);
-  // console.log(friend.online);
+// for (const friend of friends) {
+//   // console.log(friend);
+//   // console.log(friend.name);
+//   // console.log(friend.online);
 
-  friend.newProp = 555;
-}
+//   friend.newProp = 555;
+// }
 
-// console.table(friends);
+// // console.table(friends);
 
-// const findFriendByName = function (allFriends, nameToFind) {
-//   for (const friend of allFriends) {
-//     if (friend.name === nameToFind) {
-//       return `FIND ${nameToFind}!!!`;
-//     }
-//   }
+// // const findFriendByName = function (allFriends, nameToFind) {
+// //   for (const friend of allFriends) {
+// //     if (friend.name === nameToFind) {
+// //       return `FIND ${nameToFind}!!!`;
+// //     }
+// //   }
 
-//   return `Not find ${nameToFind}`;
-// };
+// //   return `Not find ${nameToFind}`;
+// // };
 
-// console.log(findFriendByName(friends, 'Poly'));
-// console.log(findFriendByName(friends, 'Chelsy'));
+// // console.log(findFriendByName(friends, 'Poly'));
+// // console.log(findFriendByName(friends, 'Chelsy'));
 
-// const getAllNames = function (allFriends) {
-//   const names = [];
+// // const getAllNames = function (allFriends) {
+// //   const names = [];
 
-//   for (const friend of friends) {
-//     names.push(friend.name);
-//   }
-//   return names;
-// };
+// //   for (const friend of friends) {
+// //     names.push(friend.name);
+// //   }
+// //   return names;
+// // };
 
-// console.log(getAllNames(friends));
+// // console.log(getAllNames(friends));
 
-// const getOnlineFriends = function (allFriends) {
-//   const onlineFriends = [];
+// // const getOnlineFriends = function (allFriends) {
+// //   const onlineFriends = [];
 
-//   for (const friend of allFriends) {
-//     if (friend.online) {
-//       onlineFriends.push(friend);
-//     }
-//   }
-//   return onlineFriends;
-// };
+// //   for (const friend of allFriends) {
+// //     if (friend.online) {
+// //       onlineFriends.push(friend);
+// //     }
+// //   }
+// //   return onlineFriends;
+// // };
 
-// console.log(getOnlineFriends(friends));
+// // console.log(getOnlineFriends(friends));
 
-// const getOfflineFriends = function (allFriends) {
-//     const offlineFriends = [];
+// // const getOfflineFriends = function (allFriends) {
+// //     const offlineFriends = [];
 
-//   for (const friend of allFriends) {
-//     if (!friend.online) {
-//       offlineFriends.push(friend);
-//     }
-//   }
-//   return offlineFriends;
-// };
+// //   for (const friend of allFriends) {
+// //     if (!friend.online) {
+// //       offlineFriends.push(friend);
+// //     }
+// //   }
+// //   return offlineFriends;
+// // };
 
-// console.log(getOfflineFriends(friends));
+// // console.log(getOfflineFriends(friends));
 
-// const getFriendsByOnlineStatus = function (allFriends) {
-//   const friendsByStatus = {
-//     online: [],
-//     offline: [],
-//   };
+// // const getFriendsByOnlineStatus = function (allFriends) {
+// //   const friendsByStatus = {
+// //     online: [],
+// //     offline: [],
+// //   };
 
-//   for (const friend of allFriends) {
-//     if (friend.online) {
-//       friendsByStatus.online.push(friend);
-//       continue;
-//     }
+// //   for (const friend of allFriends) {
+// //     if (friend.online) {
+// //       friendsByStatus.online.push(friend);
+// //       continue;
+// //     }
 
-//     friendsByStatus.offline.push(friend);
+// //     friendsByStatus.offline.push(friend);
 
-//     // const key = friend.online ? 'online' : 'offline';
-//     // friendsByStatus[key].push(friend);
-//   }
+// //     // const key = friend.online ? 'online' : 'offline';
+// //     // friendsByStatus[key].push(friend);
+// //   }
 
-//   return friendsByStatus;
-// };
+// //   return friendsByStatus;
+// // };
 
-// console.log(getFriendsByOnlineStatus(friends));
+// // console.log(getFriendsByOnlineStatus(friends));
+
+// ====================================================================
+
+// const cart = {
+//     items: [],
+//     getItems() { },
+//     add(product) { },
+//     remove(productName) { },
+//     clear() { },
+//     countTotalPrice() { },
+//     increaseQuantity(productName) { },
+//     decreaseQuantity(productName) { },
+// }
+
+// console.table(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍓', price: 130 });
+
+// console.table(cart.getItems());
+
+// cart.remove('🍎');
