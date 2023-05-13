@@ -127,3 +127,171 @@
 //   // Рейтинг
 //   console.log(book.rating);
 // }
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
+// const playlist = {
+//   name: 'My playlist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   trackCount: 3,
+// };
+
+// console.log(playlist);
+
+// console.log(playlist.name);
+// console.log(playlist.rating);
+// console.log(playlist.tracks);
+// console.log(playlist.trackCount);
+
+// const propertyName = 'tracks';
+
+// console.log(playlist[propertyName]);
+// console.log(playlist['rating']);
+
+// ====================================================================
+
+// const username = 'Mango';
+// const email = 'mango@mail.com';
+
+// // const signupData = {
+// //     username: username,
+// //     email: email,
+// // }
+
+// const signupData = {
+//     username,
+//     email,
+// }
+
+// console.log(signupData);
+
+// ====================================================================
+
+// const inputName = 'color';
+// const inputValue = 'tomato';
+
+// const colorPickerData = {
+//     [inputName]: inputValue,
+// };
+
+// console.log(colorPickerData);
+
+// ====================================================================
+
+// const playlist = {
+//   name: 'My playlist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   trackCount: 3,
+//   //     getName: function () {
+//   //       console.log('Its a getName');
+//   //   }
+//   getName() {
+//     console.log('Its a getName');
+//   },
+// };
+
+// console.log(playlist);
+
+// playlist.getName();
+
+// ====================================================================
+
+// const playlist = {
+//   name: 'My playlist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+
+//   changeName(newName) {
+//     this.name = newName;
+//   },
+
+//   addTrack(newTrack) {
+//     this.tracks.push(newTrack);
+//   },
+
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
+
+//   getTrackCount() {
+//     return this.tracks.length;
+//   },
+// };
+
+// playlist.changeName('Poly');
+// playlist.addTrack('track-4');
+// playlist.updateRating(4.5);
+// playlist.getTrackCount();
+
+// console.log(playlist);
+
+// ====================================================================
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// let totalFeedback = 0;
+
+// // const keys = Object.keys(feedback);
+
+// // console.log(keys);
+
+// // for (const key of keys) {
+// //   console.log(key);
+// //   console.log(feedback[key]);
+
+// //   totalFeedback += feedback[key];
+// // }
+
+// // console.log('totalFeedback:', totalFeedback);
+
+// const values = Object.values(feedback);
+
+// console.log(values);
+
+// for (const value of values) {
+//     console.log(value);
+
+//     totalFeedback += value;
+// }
+
+// console.log('totalFeedback:', totalFeedback);
+
+// ====================================================================
+
+const friends = [
+  { name: 'Mango', online: false },
+  { name: 'Kiwi', online: true },
+  { name: 'Poly', online: true },
+  { name: 'Ajax', online: false },
+];
+
+// console.table(friends);
+
+for (const friend of friends) {
+  // console.log(friend);
+  // console.log(friend.name);
+  // console.log(friend.online);
+
+  friend.newProp = 555;
+}
+
+// console.table(friends);
+
+const findFriendByName = function (allFriends, name) {
+  for (const friend of allFriends) {
+    if (friend.name === name) {
+      return 'FIND!!!';
+    }
+  }
+};
+
+console.log(findFriendByName(friends, 'Poly'));
+console.log(findFriendByName(friends, 'Chelsy'));
