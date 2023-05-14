@@ -381,3 +381,80 @@
 // console.table(cart.getItems());
 
 // cart.remove('🍎');
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
+// const user = {
+//     name: 'Mango',
+//     age: 20,
+//     hobby: 'html',
+//     premium: true,
+// }
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user['premium'] = false;
+
+// const arr = Object.keys(user);
+
+// for (const key of arr) {
+//     console.log(`${key} - ${user[key]}`);
+// }
+
+// console.table(user);
+
+// ====================================================================
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// function getResult(obj) {
+//   const values = Object.values(obj);
+//   let sum = 0;
+
+//   for (const value of values) {
+//     sum += value;
+//   }
+//   return sum;
+// }
+
+// getResult(salaries);
+// console.log(getResult(salaries));
+
+// ====================================================================
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// const test = Object.create(salaries);
+// test.Kate = 140;
+// test.David = 300;
+
+// function getResult(obj) {
+//   let sum = 0;
+
+//   for (const key in obj) {
+//     // console.log('Усі', key);
+//     if (obj.hasOwnProperty(key)) {
+//       console.log('Власні', key);
+//       }
+//     if (!obj.hasOwnProperty(key)) {
+//       console.log('Невласні', key);
+//       }
+
+//     sum += obj[key];
+//   }
+//   return sum;
+// }
+
+// console.log(getResult(test));
+
+// ====================================================================
