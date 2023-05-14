@@ -501,3 +501,84 @@
 // console.log(calcTotalPrice(stones, 'qwerty'));
 
 // ====================================================================
+
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+
+// const account = {
+//   balance: 0,
+//   transactions: [],
+
+//   createTransaction(amount, type) {
+//     const transaction = {
+//       amount,
+//       type,
+//       id: Date.now(),
+//     };
+//     // console.log(transaction);
+//     return transaction;
+//   },
+
+//   deposit(amount) {
+//     const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.transactions.push(transaction);
+//     this.balance += amount;
+//   },
+
+//   withdraw(amount) {
+//     if (this.balance < amount) {
+//       console.log('недостатньо коштів');
+//       return;
+//     }
+
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(transaction);
+//     this.balance -= amount;
+//   },
+
+//   getBalance() {
+//     alert(this.balance);
+//   },
+
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         console.log(transaction);
+//       }
+//     }
+//   },
+
+//   getTransactionTotal(type) {
+//     let total = 0;
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         total += transaction.amount;
+//       }
+//     }
+//     return total;
+//   },
+// };
+
+// account.deposit(1000);
+// account.deposit(1000);
+// account.deposit(1000);
+// account.deposit(1000);
+// account.deposit(1000);
+// account.deposit(1000);
+
+// // account.getBalance();
+// // account.withdraw(2000);
+// // setTimeout(() => {
+// //   account.withdraw(500);
+// // }, 200);
+// // setTimeout(() => { account.getBalance() }, 250);
+// account.withdraw(1000);
+// account.withdraw(2000);
+// account.withdraw(1000);
+
+// console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+// console.log(account.getTransactionTotal(Transaction.DEPOSIT  ));
+
+// console.log(account);
