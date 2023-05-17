@@ -107,28 +107,111 @@
 // ====================================================================
 // ====================================================================
 
-const a = { x: 1, y: 2 };
-const b = { x: 0, z: 3 };
+// const a = { x: 1, y: 2 };
+// const b = { x: 0, z: 3 };
 
-const c = Object.assign(a, b);
-console.log(c);
+// const c = Object.assign(a, b);
+// console.log(c);
 
-const message = 'hello';
-console.log(...message);
-// ====================================================================
-
-
+// const message = 'hello';
+// console.log(...message);
 
 // ====================================================================
 
+// const playlist = {
+//   name: 'My playlist',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   trackCount: 3,
+// };
 
+// const { rating, name, tracks, trackCount: numberOfTracks = 0, author = 'user' } = playlist;
+
+// console.log(numberOfTracks);
+// console.log(author);
+// console.log(playlist);
 
 // ====================================================================
 
+// const profile = {
+//   name: 'Igor',
+//   tag: 'IgorN',
+//   location: 'Kyiv, Ukraine',
+//   avatar: 'https://avatar.com',
+//   stats: {
+//     followers: 100,
+//     views: 3333,
+//     likes: 123,
+//   },
+// };
 
+// const { name, tag, location, avatar, stats: { followers, views, likes } } = profile;
+
+// // const { followers, views, likes } = stats;
+
+// console.log(name, tag, location, avatar, followers, views, likes);
 
 // ====================================================================
 
+// const rgb = [255, 100, 80];
 
+// const [red, green, blue] = rgb;
+// // const [red, , blue] = rgb;
 
 // ====================================================================
+
+// const authors = {
+//     kiwi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 6,
+// };
+
+// // const ratings = Object.values(authors);
+// // console.log(ratings);
+// // console.log(Math.max(...ratings));
+
+// // const keys = Object.keys(authors);
+// // console.log(keys);
+
+// // for (const key of keys) {
+// //     console.log(key);
+// //     console.log(authors[key]);
+// // }
+
+// const entries = Object.entries(authors);
+// // console.log(entries);
+
+// for (const entry of entries) {
+//     // console.log(entry);
+//     // const name = entry[0];
+//     // const rating = entry[1];
+
+//     const [name, rating] = entry;
+
+//     console.log(name, rating);
+// }
+
+// ====================================================================
+
+// const profile = {
+//   name: 'Igor',
+//   tag: 'IgorN',
+//   location: 'Kyiv, Ukraine',
+//   avatar: 'https://avatar.com',
+//   stats: {
+//     followers: 100,
+//     views: 3333,
+//     likes: 123,
+//   },
+// };
+
+// const { name, tag, location, ...restProps} = profile;
+
+// // const restProps = {
+// //     avatar: profile.avatar,
+// //     stats: profile.stats,
+// // }
+
+// console.log(name, tag, location);
+// console.log(restProps);
