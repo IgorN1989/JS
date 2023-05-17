@@ -233,44 +233,296 @@
 
 // ====================================================================
 
-const showProfileInfo = function (userProfile) {
-  // console.log(userProfile);
-  const {
-    name,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = userProfile;
+// const showProfileInfo = function (userProfile) {
+//   // console.log(userProfile);
+//   const {
+//     name,
+//     tag,
+//     location,
+//     avatar,
+//     stats: { followers, views, likes },
+//   } = userProfile;
 
-  console.log(name, tag, location, avatar, followers, views, likes);
-};
+//   console.log(name, tag, location, avatar, followers, views, likes);
+// };
 
-const profile = {
-  name: 'Igor',
-  tag: 'IgorN',
-  location: 'Kyiv, Ukraine',
-  avatar: 'https://avatar.com',
-  stats: {
-    followers: 100,
-    views: 3333,
-    likes: 123,
-  },
-};
+// const profile = {
+//   name: 'Igor',
+//   tag: 'IgorN',
+//   location: 'Kyiv, Ukraine',
+//   avatar: 'https://avatar.com',
+//   stats: {
+//     followers: 100,
+//     views: 3333,
+//     likes: 123,
+//   },
+// };
 
-showProfileInfo(profile);
+// showProfileInfo(profile);
+
+// ====================================================================
+
+// const cart = {
+//   items: [],
+
+//   getItems() {
+//     return this.items;
+//   },
+
+//   add(product) {
+//     for (const item of this.items) {
+
+//       if (item.name === product.name) {
+//         item.quantity += 1;
+//         return;
+//       }
+// }
+
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     }
+//     this.items.push(newProduct);
+
+//   },
+
+//   remove(productName) {
+//     const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       // const item = this.items[i];
+//       const { name } = items[i];
+//       if (name === productName) {
+//         // console.log('FIND');
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+
+//   clear() {
+//     this.items = [];
+//   },
+
+//   countTotalPrice() {
+//     const { items } = this;
+//     let total = 0;
+
+//     for (const {price, quantity} of this.items) {
+//       total += price * quantity;
+//     }
+
+//     return total;
+//   },
+
+//   increaseQuantity(productName) {},
+
+//   decreaseQuantity(productName) {},
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍇', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+// console.table(cart.getItems());
+
+// console.log('Total:', cart.countTotalPrice());
+
+// cart.remove('🍋');
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
 
 // ====================================================================
 // ====================================================================
 // ====================================================================
+
+// function calcBMI({ weight, height }) {
+//   const numericWeight = Number(weight.replace(',', '.'));
+//   const numericHeight = Number(height.replace(',', '.'));
+
+//   return Number((numericWeight / numericHeight ** 2).toFixed(1));
+// }
+
+// console.log(
+//   calcBMI({
+//     weight: '88,3',
+//     height: '1.75',
+//   })
+// );
+
 // ====================================================================
+
+// function printContactInformation({ names, phones }) {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]} : ${phoneList[i]}`);
+//   }
+// }
+
+// printContactInformation({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
 // ====================================================================
+
+// /**
+//  * Get string with info about company and return info strings
+//  * @param {Object} object
+//  * @returns {String} Info string
+//  */
+// function getBotReport({ bots: { repairBots, defenceBots }, companyName }) {
+//   console.log('companyName:', companyName);
+//   // console.log('bots:', bots);
+//   console.log('repairBots:', repairBots);
+//   console.log('defenceBots:', defenceBots);
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// }
+
+// console.log(
+//   getBotReport({ companyName: 'Cyberdyne Systems', bots: { repairBots: 150, defenceBots: 50 } })
+// );
+
 // ====================================================================
+
+// /**
+//  * Get object with company and return info about stock
+//  * @param {Object} object
+//  * @returns {String} Info about stock in company
+//  */
+// function getStockReport({ companyName, stock }) {
+//   // console.log(stock);
+//   const values = Object.values(stock);
+//   // console.log(values);
+//   let total = 0;
+
+//   for (const value of values) {
+//     total += value;
+//   }
+//   // console.log(total);
+//   return `${companyName} has ${total} items in stock`;
+// }
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdyne Systems',
+//     stock: { repairBots: 150, defenceBots: 50 },
+//   })
+// );
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Belacci',
+//     stock: { shoes: 20, skirts: 10, hats: 5  },
+//   })
+// );
+
 // ====================================================================
+
+// function createContact(partialContact) {
+//   return {
+//     id: generateId(),
+//     list: 'default',
+//     ...partialContact,
+//   };
+// }
+
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   })
+// );
+
+// console.log(
+//   createContact({
+//     name: 'Poly',
+//     email: 'poly@mail.com',
+//   })
+// );
+
+// function generateId() {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// }
+
 // ====================================================================
+
+// function transformName({ firstName, lastName, ...info }) {
+//   console.log(firstName);
+//   console.log(lastName);
+//   console.log(info);
+
+//   return {
+//     fullName: `${firstName} ${lastName}`,
+//     ...info,
+//   };
+// }
+
+// console.log(
+//   transformName({
+//     id: 1,
+//     firstName: 'Jacob',
+//     lastName: 'Mercer',
+//     email: 'j.mercer@mail.com',
+//     friendCount: 40,
+//   })
+// );
+
+// console.log(
+//   transformName({
+//     id: 2,
+//     firstName: 'Adrian',
+//     lastName: 'Cross',
+//     email: 'a.cross@hotmail.com',
+//     friendCount: 20,
+//   })
+// );
+
 // ====================================================================
-// ====================================================================
-// ====================================================================
+
+// function createContact(arr) {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     arr[i] = {
+//       id: generateId(),
+//       list: 'default',
+//       ...arr[i],
+//     };
+//     console.log(arr[i]);
+//   }
+
+// //   for (let obj of arr) {
+// //     obj.id = generateId();
+// //     if (!obj.hasOwnProperty('list')) {
+// //       obj.list = 'default';
+// //     }
+
+// //     console.log(arr);
+// //   }
+// }
+
+// console.log(
+//   createContact([
+//     {
+//       name: 'Mango',
+//       email: 'mango@mail.com',
+//       list: 'friends',
+//     },
+//     { name: 'Poly', email: 'poly@mail.com' },
+//   ])
+// );
+
+// function generateId() {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// }
+
 // ====================================================================
 // ====================================================================
 // ====================================================================
