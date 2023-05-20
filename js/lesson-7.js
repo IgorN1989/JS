@@ -76,7 +76,53 @@
 
 // ====================================================================
 
+// const fnA = function (parameter) {
+//     const innerVariable = 'значення внутряшньої змінної функції fnA';
+
+//     const innerFunction = function () {
+//         console.log(parameter);
+//         console.log(innerVariable);
+//         console.log('Це виклик innerFunction');
+//     };
+
+//     return innerFunction;
+// };
+
+// const fnB = fnA(555);
+
+// fnB();
+
+// console.log(fnB);
+
 // ====================================================================
+
+const makeDish = function (sheffName, dish) {
+  console.log(`${sheffName} готує ${dish}`);
+};
+
+// makeDish('Mango', 'пиріжок');
+// makeDish('Mango', 'омлет');
+// makeDish('Mango', 'чай');
+
+// makeDish('Poly', 'котлета');
+// makeDish('Poly', 'суп');
+// makeDish('Poly', 'кава');
+
+const makeSheff = function (name) {
+  const makeDish = function (dish) {
+    console.log(`${name} готує ${dish}`);
+    };
+    
+    return makeDish;
+};
+
+const mango = makeSheff('Mango');
+
+// console.log(mango);
+
+mango('котлети');
+mango('пиріжок');
+
 // ====================================================================
 // ====================================================================
 
