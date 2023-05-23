@@ -225,21 +225,156 @@
 
 // ====================================================================
 
-const onGetPositionSuccess = (position) => {
-  console.log(('Це виклик onGetPositionSuccess'));
-  console.log(position);
-};
+// const onGetPositionSuccess = (position) => {
+//   console.log(('Це виклик onGetPositionSuccess'));
+//   console.log(position);
+// };
 
-const onGetPositionError = (error) => {
-  console.log('Це виклик onGetPositionError');
-  console.log(error);
-};
+// const onGetPositionError = (error) => {
+//   console.log('Це виклик onGetPositionError');
+//   console.log(error);
+// };
 
-window.navigator.geolocation.getCurrentPosition(
-  onGetPositionSuccess,
-  onGetPositionError
-);
+// window.navigator.geolocation.getCurrentPosition(
+//   onGetPositionSuccess,
+//   onGetPositionError
+// );
 
+// ====================================================================
+// ====================================================================
+// ====================================================================
+
+// /**
+//  * Test callback
+//  * @param {*} arr array with some value
+//  * @param {*} callback function add and logger
+//  */
+// function add(a, b) {
+//   return a + b;
+// }
+
+// console.log(add(1, 2));
+
+// const arr = [3, 10];
+
+// function foo(array, callback) {
+//   const firstEl = array[0];
+//   const secondEl = array[1];
+//   const result = callback(firstEl, secondEl);
+//   console.log(callback);
+//   console.log(result);
+// }
+
+// foo(arr, add);
+
+// foo(arr, logger);
+
+// function logger(a, b) {
+//   alert(`Функція логгер: ${a}`);
+//   alert(`Функція логгер: ${b}`);
+// }
+
+// ====================================================================
+
+// let i = Date.now()
+
+// function createProduct(partialProduct, callback) {
+//   i += 1;
+//   const obj = {
+//     id: i,
+//     ...partialProduct,
+//   };
+//   callback(obj);
+// };
+
+// function logProduct(product) {
+//   console.log(product);
+//  };
+
+// function logTotalPrice({price, quantity}) {
+//   console.log(price * quantity);
+//   return price * quantity;
+// };
+
+// createProduct({
+//   name: '🍎',
+//   price: 30,
+//   quantity: 3,
+// }, logProduct);
+
+// createProduct({
+//   name: '🍋',
+//   price: 20,
+//   quantity: 5,
+// }, logTotalPrice);
+
+// createProduct({
+//   name: '🍎',
+//   price: 30,
+//   quantity: 3,
+// }, logTotalPrice);
+
+// createProduct({
+//   name: '🍋',
+//   price: 20,
+//   quantity: 5,
+// }, logProduct);
+
+// ====================================================================
+
+// const TRANSACTION_LIMIT = 1000;
+
+// const account = {
+//   userName: 'Jacob',
+//   balance: 3400,
+
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > this.balance) {
+//       onError('Мало коштів');
+//     } else if (amount > TRANSACTION_LIMIT) {
+//       onError('Перевищенно ліміт');
+//     } else {
+//       this.balance -= amount;
+//       onSuccess(`Списано ${amount}. Залишок = ${this.balance}`);
+//     }
+//   },
+
+//   deposit(amount, onSuccess, onError) {
+//     if (amount <= 0) {
+//       onError('Значення має бути більше нуля');
+//     } else if (amount > TRANSACTION_LIMIT) {
+//       onError('Перевищенно ліміт');
+//     } else {
+//       this.balance += amount;
+//       onSuccess(`Рахунок поповненно на ${amount}. Баланс = ${this.balance}`)
+
+//     }
+//   },
+// };
+
+// function handleSuccess(message) {
+//   console.log(`✔ Success! ${message}`);
+// }
+
+// function handleError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
+
+// account.withdraw(2000, handleSuccess, handleError);
+// account.withdraw(3600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
 // ====================================================================
 // ====================================================================
 // ====================================================================
