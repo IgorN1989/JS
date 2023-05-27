@@ -465,4 +465,214 @@
 // console.log('anyHardcorePlayers:', anyHardcorePlayers);
 
 // ====================================================================
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) => {
+//   console.log('number', number);
+//   console.log('acc', acc);
+
+//   return acc + number;
+// }, 0);
+
+// console.log(total);
+
+// ====================================================================
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
+
+// const totalSalary = Object.values(salary).reduce((total, value) => total + value, 0);
+// console.log(totalSalary);
+
+// ====================================================================
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+
+// const totalTimePlayed = players.reduce((total, player) => total + player.timePlayed, 0);
+// console.log(totalTimePlayed);
+
+// ====================================================================
+
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+
+// const totalCost = cart.reduce((total, { price, quantity }) => total + price * quantity, 0);
+// console.log(totalCost);
+
+// ====================================================================
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // const allTags = tweets.flatMap(tweet => tweet.tags);
+// const allTags = tweets.reduce((tags, tweet) => [...tags, ...tweet.tags], []);
+// console.log(allTags);
+
+// // const tagsStats = allTags.reduce((acc, tag) => {
+// //     console.log(acc);
+
+// //   if (acc[tag]) {
+// //     acc[tag] += 1;
+
+// //     return acc;
+// //   }
+
+// //   acc[tag] = 1;
+// //   return acc;
+// // }, {});
+
+// const tagsStats = allTags.reduce(
+//   (acc, tag) => ({
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   }),
+//   {},
+// );
+// console.log(tagsStats);
+
+// ====================================================================
+
+// const numbers = [1, 9, 6, 2, 3];
+// numbers.sort();
+// console.log(numbers);
+
+// const letters = ['b', 'B', 'a', 'A'];
+// letters.sort();
+// console.log(letters);
+
+// ====================================================================
+
+// const numbers = [1, 9, 6, 2, 3];
+// // numbers.sort((curEl, nextEl) => {
+// //     return curEl - nextEl;
+// // });
+
+// console.log(numbers);
+
+// const copy = [...numbers];
+// copy.sort();
+// console.log(copy);
+// console.log(copy === numbers);
+
+// const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+// const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+
+// console.log(descSortedNumbers);
+// console.log(ascSortedNumbers);
+
+// ====================================================================
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+
+// const sortedByBestPlayers = [...players].sort(
+//   (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed
+// );
+
+// const sortedByWorstPlayers = [...players].sort(
+//   (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed
+// );
+
+// console.table(players);
+// console.table(sortedByBestPlayers);
+// console.table(sortedByWorstPlayers);
+
+// const byName = [...players].sort((a, b) => {
+//   const result = a.name > b.name;
+
+//   if (result) {
+//     return 1;
+//   }
+
+//   if (!result) {
+//     return -1;
+//   }
+// });
+
+// console.table(byName);
+
+// ====================================================================
+
+// const array = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
+// console.log(array.flat());
+// console.log(array.flat(2));
+// console.log(array.flat(3));
+
+// ====================================================================
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // const allTags = tweets.reduce((tags, tweet) => [...tags, ...tweet.tags], []);
+// // console.log(allTags);
+
+// // const allTags = tweets.map(tweet => tweet.tags).flat();
+// const allTags = tweets.flatMap(tweet => tweet.tags);
+// console.log(allTags);
+
+// ====================================================================
+
+// const numbers = [1, 5, 2, 4, 3];
+
+// const greaterThanTwo = numbers.filter(num => num > 2);
+// console.log(greaterThanTwo);
+
+// const multByThree = greaterThanTwo.map(num => num * 3);
+// console.log(multByThree);
+
+// const sorted = multByThree.sort((a, b) => a - b);
+// console.log(sorted);
+
+// const resulted = numbers
+//   .filter(num => num > 2)
+//   .map(num => num * 3)
+//   .sort((a, b) => a - b);
+// console.log(resulted);
+
+// ====================================================================
+
+// const players = [
+//   { id: 'id-1', name: 'Mango', isOnline: true, rank: 800 },
+//   { id: 'id-2', name: 'Poly', isOnline: false, rank: 600 },
+//   { id: 'id-3', name: 'Ajax', isOnline: true, rank: 100 },
+//   { id: 'id-4', name: 'Kiwi', isOnline: true, rank: 400 }, 
+// ];
+
+// const onlineAndSorted = players
+//   .filter(player => player.isOnline)
+//   .sort((prev, next) => prev.rank - next.rank);
+// console.table(onlineAndSorted);
+
+// ====================================================================
+
+// ====================================================================
+
 // ====================================================================
