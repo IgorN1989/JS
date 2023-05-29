@@ -663,7 +663,7 @@
 //   { id: 'id-1', name: 'Mango', isOnline: true, rank: 800 },
 //   { id: 'id-2', name: 'Poly', isOnline: false, rank: 600 },
 //   { id: 'id-3', name: 'Ajax', isOnline: true, rank: 100 },
-//   { id: 'id-4', name: 'Kiwi', isOnline: true, rank: 400 }, 
+//   { id: 'id-4', name: 'Kiwi', isOnline: true, rank: 400 },
 // ];
 
 // const onlineAndSorted = players
@@ -673,6 +673,115 @@
 
 // ====================================================================
 
-// ====================================================================
+// const arr = [1, 2, 3, 4, 5];
+// arr.forEach(value => console.log(value*19));
+// console.table(arr);
+
+// const result1 = arr.map(item => {
+//     if (item > 3) {
+//         return item;
+//     }
+// });
+// console.table(result1);
+
+// const result2 = arr.filter(item => item > 3);
+// console.table(result2);
 
 // ====================================================================
+
+// Колекція об'єктів для всіх прикладів з автомобілями
+const cars = [
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'accord',
+    type: 'sedan',
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'Accord',
+    type: 'sedan',
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: 'Mazda',
+    model: 'Mazda 6',
+    type: 'sedan',
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: 'Mazda',
+    model: 'CX-9',
+    type: 'suv',
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: 'Toyota',
+    model: '4Runner',
+    type: 'suv',
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: 'Toyota',
+    model: 'Sequoia',
+    type: 'suv',
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: 'Toyota',
+    model: 'Tacoma',
+    type: 'truck',
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'F-150',
+    type: 'truck',
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'Fusion',
+    type: 'sedan',
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: 'Ford',
+    model: 'Explorer',
+    type: 'suv',
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
+
+// ====================================================================
+
+const allModels = cars.map(car => car.model);
+console.log(allModels);
