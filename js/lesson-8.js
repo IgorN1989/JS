@@ -783,5 +783,76 @@ const cars = [
 
 // ====================================================================
 
-const allModels = cars.map(car => car.model);
-console.log(allModels);
+// const allModels = cars.map(car => car.model);
+// console.log(allModels);
+
+// // const getModels = arr => {
+// //     const models = arr.map(item => item.model);
+// //     return models;
+// // };
+// // console.log(getModels(cars));
+
+// const getModels = arr => arr.map(({model}) => model);
+// console.log(getModels(cars));
+
+// ====================================================================
+
+// const makeCarsWithDiscount = (cars, discount) => {
+//     const result = cars.map((car) => {
+//         const changePrice = car.price / 100 * discount;
+//         car.price -= changePrice;
+//         return car;
+//     })
+//     return result;
+// };
+
+// console.log(makeCarsWithDiscount(cars, 6));
+
+// const makeCarsWithDiscount = (cars, discount) => cars.map((car) => {
+//         car.price -= car.price / 100 * discount;
+//         return car;
+//     })
+
+// const makeCarsWithDiscount = (cars, discount) => cars.map((car) => {
+//     car.price -= car.price / 100 * discount;
+//     car.price = Math.ceil(car.price)
+//         return car;
+//     })
+
+// console.table(makeCarsWithDiscount(cars, 6));
+// console.table(makeCarsWithDiscount(cars, 11));
+
+// ====================================================================
+
+// const filterByPrice = (cars, threshold) => {
+//     const result = cars.filter((item) => {
+//         if (item.price < threshold) {
+//             return item;
+//         }
+//     })
+//     return result;
+// };
+
+// const filterByPrice = (cars, threshold) => cars.filter(({ price }) => price < threshold);
+
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 25000));
+
+// ====================================================================
+
+// const getCarsWithDiscount = cars => {
+//     const result = cars.filter(car => {
+//         if (car.onSale) {
+//             return car;
+//         }
+//     })
+//     return result;
+// };
+
+// const getCarsWithDiscount = cars => cars.filter(({ onSale }) => onSale);
+// console.table(getCarsWithDiscount(cars));
+
+// ====================================================================
+// ====================================================================
+// ====================================================================
+// ====================================================================
