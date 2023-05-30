@@ -853,6 +853,36 @@ const cars = [
 // console.table(getCarsWithDiscount(cars));
 
 // ====================================================================
+
+// const getCarsWithType = (cars, type) => {
+//   const result = cars.filter((car) => {
+//     if (car.type === type) {
+//       return car;
+//     }
+//   })
+//   return result;
+// }
+
+// const getCarsWithType = (cars, type) => cars.filter(({ type: carType }) => carType === type);
+
+// console.table(getCarsWithType(cars, 'suv'));
+// console.table(getCarsWithType(cars, 'sedan'));
+
 // ====================================================================
+
+// const getCarByModel = (cars, model) => {
+//   const result = cars.find((car) => {
+//     if (car.model === model) {
+//       return car;
+//     }
+//   })
+//   return result;
+// };
+
+// const getCarByModel = (cars, model) => cars.find(car => car.model === model);
+
+// console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));
+
 // ====================================================================
 // ====================================================================
