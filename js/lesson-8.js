@@ -885,4 +885,98 @@ const cars = [
 // console.log(getCarByModel(cars, 'CX-9'));
 
 // ====================================================================
+
+// const sortedByAscendingAmount = cars => {
+//   const result = cars.sort((prevCar, nextCar) => (prevCar.amount - nextCar.amount));
+//   return result;
+// };
+
+// console.table(sortedByAscendingAmount(cars));
+
+// ====================================================================
+
+// const sortedByDescendingPrice = cars => {
+//   const result = cars.sort((prevCar, nextCar) => (nextCar.price - prevCar.price));
+//   return result;
+// };
+
+// console.table(sortedByDescendingPrice(cars));
+
+// ====================================================================
+
+// const sortByModel = (cars, order) => {
+//   let result;
+//   if (order === 'asc') {
+//     result = cars.sort((a, b) => a.model.localeCompare(b.model));
+//   } else {
+//     result = cars.sort((a, b) => b.model.localeCompare(a.model));;
+//   }
+//   return result;
+// };
+
+// console.table(sortByModel(cars, 'asc'));
+// console.table(sortByModel(cars, 'desc'));
+
+// ====================================================================
+
+// const getTotalAmount = cars => {
+//   const result = cars.reduce((acc, car) => {
+//     return acc + car.amount;
+//   }, 0)
+//   return result;
+// }
+
+// const getTotalAmount = cars => cars.reduce((acc, car) => acc + car.amount, 0);
+
+// console.log(getTotalAmount(cars));
+
+// ====================================================================
+
+// const getAvailableCarNames = cars => cars.filter(car => car.onSale).map(({model}) => model);
+
+// console.log(getAvailableCarNames(cars));
+
+// ====================================================================
+
+// const getSortedCarsOnSale = cars => {
+//   const result = cars.filter(car => car.onSale).sort((a, b) => a.price - b.price);
+//   return result.reduce(
+//     (acc, car, idx) => {
+//       return acc + `${idx + 1}. ${car.make} ${car.model} - ${car.price}\n`;
+//     },
+//     result.length ? `Кількість автомобілів ${result.length}:\n` : 'Немає'
+//   );
+// };
+
+// console.table(getSortedCarsOnSale(cars));
+
+// ====================================================================
+
+// const str = 'fwewfwfaczfascawdczxzsdaczzcsfacaDAxcadfa';
+// const str1 = 'fwewfwfaczfascazvdxfndgfmretnsrafGDBhwerDAxcadfa';
+
+// function foo(str) {
+//   str = str.split('');
+//   return str.reduce((acc, value) => {
+//     // if(key in obj)
+//     if (acc.hasOwnProperty(value)) {
+//       acc[value] += 1;
+//     } else {
+//       acc[value] = 1;
+//     }
+//     return acc;
+//   }, {});
+// }
+
+// console.log(foo(str));
+// console.log(foo(str1));
+
+// ====================================================================
+
+// ====================================================================
+
+// ====================================================================
+
+// ====================================================================
+
 // ====================================================================
