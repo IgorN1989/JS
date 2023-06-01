@@ -133,3 +133,21 @@
 // console.log(isPalindrome(str3));
 
 // ====================================================================
+
+// function calcAverage() {
+//   // console.log(arguments);
+//   let total = 0;
+//   let count = 0;
+//   for (const argument of arguments) {
+//     if (typeof argument !== 'number') {
+//       continue;
+//     }
+//     total += argument;
+//     count += 1;
+//   }
+//   return total / count;
+// }
+
+// console.log(calcAverage(1, 2, 3, 4, 5));
+// console.log(calcAverage(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+// console.log(calcAverage(1, 2, 3, 4, 5, 'a', 'b'));
