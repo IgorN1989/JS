@@ -90,3 +90,46 @@
 // console.log(totalAmount);
 
 // ====================================================================
+
+// // const array = [7, 7, 7, 3, 5, 5, 5];
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+// // console.log(array.reverse());
+
+// // for (let i = array.length; i >= 0; i -= 1) {
+// //     console.log(array[i]);
+// // }
+
+// for (let i = 0; i < array.length / 2; i += 1) {
+//   const index = array.length - 1 - i;
+//   const template = array[i];
+//   array[i] = array[index];
+//   array[index] = template;
+// }
+
+// console.log(array);
+
+// ====================================================================
+
+// const str = 'Я несу гусеня';
+// const str1 = 'Де помити мопед';
+// const str2 = 'І була пані на палубІ';
+// const str3 = 'Поліна неси Ром!';
+
+// function isPalindrome(str) {
+//     // console.log(str);
+
+//     const normalizedString = str.toLowerCase().replaceAll(' ','');
+//     // console.log(normalizedString);
+
+//     const reversedString = normalizedString.split('').reverse().join('');
+//     // console.log(reversedString);
+
+//     return normalizedString === reversedString;
+// }
+
+// console.log(isPalindrome(str));
+// console.log(isPalindrome(str1));
+// console.log(isPalindrome(str2));
+// console.log(isPalindrome(str3));
+
+// ====================================================================
