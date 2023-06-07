@@ -206,6 +206,32 @@
 
 // // phonebook.add.call(newPhonebook, { name: 'Mark', email: 'mark@mail.com', list: 'friends' });
 
-
 // ====================================================================
+
+// const calculator = {
+//   create(c, d) {
+//     this.a = c;
+//     this.b = d;
+//   },
+
+//   add() {
+//     return this.a + this.b;
+//   },
+
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
+
+// console.log(calculator);
+// calculator.create(5, 2);
+// console.log(calculator);
+// console.log(calculator.add());
+// console.log(calculator.mult());
+
+// calculator.create(11, 13);
+// console.log(calculator);
+// console.log(calculator.add());
+// console.log(calculator.mult());
+
 // ====================================================================
