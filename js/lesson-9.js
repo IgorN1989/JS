@@ -454,3 +454,224 @@
 // };
 // // Change code above this line
 
+// ====================================================================
+
+// const boo = function() {
+//     console.log('hi');
+// }
+// console.dir(boo);
+
+// ====================================================================
+
+// const user = {
+//     tag: 'Mango',
+//     showTag() {
+//         console.log('showTag -> this', this);
+//     },
+
+//     item: console.log(this),
+// }
+
+// console.log(user);
+
+// const user = {
+//   name: 'Igor',
+// };
+
+// const showName = function () {
+//   console.log('showName -> this', this);
+//   console.log('showName -> this.name', name);
+// };
+
+// user.showUserName = showName;
+// console.log('user', user);
+
+// user.showUserName();
+
+// ====================================================================
+
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log('showTag -> this', this);
+//     console.log('showTag -> this.tag', this.tag);
+//   },
+// };
+
+// const invokeAction = function (action) {
+//   console.log(action);
+
+//   action();
+// };
+
+// invokeAction(user.showTag);
+
+// ====================================================================
+
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log('changeColor -> this', this);
+//     // this.color = color;
+//   };
+
+//   // changeColor();
+
+//   const sweater = {
+//     color: 'teal',
+//   };
+
+//   sweater.updateColor = changeColor;
+
+// //   sweater.updateColor('red');
+
+//   return sweater.updateColor;
+// };
+
+// const swapColor = makeChangeColor();
+
+// swapColor('blue');
+
+// ====================================================================
+
+// const counter = {
+//     value: 0,
+//     increment(value) {
+//         console.log('increment -> this', this);
+//         this.value += value;
+//     },
+//     decrement(value) {
+//         console.log('decrement -> this', this);
+//         this.value -= value;
+//     },
+// };
+
+// const updateCounter = function (value, operation) {
+//     operation(value);
+// }
+
+// updateCounter(10, counter.increment);
+// updateCounter(5, counter.decrement);
+
+// ====================================================================
+
+// const chopShop = {
+//   stones: [
+//     {
+//       name: 'Emerald',
+//       price: 1300,
+//       quantity: 4,
+//     },
+//     {
+//       name: 'Diamond',
+//       price: 2700,
+//       quantity: 3,
+//     },
+//     {
+//       name: 'Sapphire',
+//       price: 1400,
+//       quantity: 7,
+//     },
+//     {
+//       name: 'Ruby',
+//       price: 800,
+//       quantity: 2,
+//     },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     // console.log(this.stones);
+//     // return this.stones.reduce((acc, stone) => {
+//     //   if (stone.name === stoneName) {
+//     //     return stone.price * stone.quantity;
+//     //   }
+//     //   return acc;
+//     // }, 0);
+
+//     return this.stones.reduce(
+//       (acc, { name, price, quantity }) => (name === stoneName ? price * quantity : acc),
+//       0
+//     );
+//   },
+// };
+
+// console.log(chopShop.calcTotalPrice('Emerald'));
+// console.log(chopShop.calcTotalPrice('Diamond'));
+// console.log(chopShop.calcTotalPrice('Sapphire'));
+// console.log(chopShop.calcTotalPrice('Ruby'));
+
+// ====================================================================
+
+// const phonebook = {
+//   contacts: [],
+//   add(contact) {
+//     const newContact = {
+//       list: 'default',
+//       ...contact,
+//     //   id: this.generateId(),
+//     //   id: phonebook.generateId(),
+//       id: () => this.generateId(),
+//     //   createdAt: this.getDate(),
+//     //   createdAt: phonebook.getDate(),
+//       createdAt: () => this.getDate(),
+//     };
+//     this.contacts.push(newContact);
+//     return this.contacts;
+//   },
+//   generateId() {
+//     return '_' + Math.random().toString(36).substr(2, 9);
+//   },
+//   getDate() {
+//     return Date.now();
+//   },
+// };
+
+// // console.log(
+// //   phonebook.add({
+// //     name: 'Mango',
+// //     email: 'mango@mail.com',
+// //     list: 'friends',
+// //   })
+// // );
+
+// // console.log(
+// //   phonebook.add({
+// //     name: 'Poly',
+// //     email: 'poly@mail.com',
+// //   })
+// // );
+
+// const newPhonebook = {
+//     contacts: [],
+// };
+
+// console.log(phonebook.add.call(newPhonebook, {
+//     name: 'Mark',
+//     email: 'mark@mail.com',
+//     list: 'friends',
+//   }));
+
+// ====================================================================
+
+// const calculator = {
+//     create(a, b) {
+//         this.a = a;
+//         this.b = b;
+//     },
+
+//     add() {
+//         return this.a + this.b;
+//     },
+
+//     mult() {
+//         return this.a * this.b;
+//     }
+// };
+
+// console.log(calculator);
+// calculator.create(11, 2);
+// console.log(calculator);
+// console.log(calculator.add());
+// console.log(calculator.mult());
+
+// ====================================================================
+
+
