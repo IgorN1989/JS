@@ -369,3 +369,174 @@
 
 // mango.changeEmail('my-new-email@mail.com');
 // console.log(mango);
+
+// ====================================================================
+
+// class Car {
+//   static description = 'опис авто';
+
+//   static logInfo(carObj) {
+//     console.log('Car.logInfo -> carObj', carObj);
+//     }
+
+//     #test = 'test';
+
+//   constructor({ brand, model, price } = {}) {
+//     // console.log('constructor');
+//     // console.log(this);
+
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+
+//   updateModel(newModel) {
+//     this.model = newModel;
+//   }
+// }
+
+// // console.dir(Car);
+// // console.log(Car.description);
+
+// const carInstance = new Car({ brand: 'Audi', model: 'Q3', price: 35000 });
+// console.log(carInstance);
+
+// console.log(Object.getPrototypeOf(carInstance));
+// console.log(Object.getPrototypeOf(carInstance) === Car.prototype);
+
+// Car.logInfo(carInstance)
+
+// console.log(carInstance.test);
+// console.log(carInstance.#test);
+
+// ====================================================================
+
+// class Car {
+//   static description = 'опис авто';
+
+//   static logInfo(carObj) {
+//     console.log('Car.logInfo -> carObj', carObj);
+//   }
+
+//   constructor({ brand, model, price } = {}) {
+//     this.brand = brand;
+//     this._model = model;
+//     this._price = price;
+//   }
+
+//   get price() {
+//     return this._price;
+//   }
+
+// //   changePrice(newPrice) {
+// //     this._price = newPrice;
+// //   }
+
+//   set price(newPrice) {
+//     this._price = newPrice;
+//   }
+
+//   //   getModel() {
+//   //     return this.model;
+//   //     }
+
+//   get model() {
+//     return this._model;
+//   }
+
+//   //     setModel(newModel) {
+//   //     this.model = newModel;
+//   //   }
+
+//   set model(newModel) {
+//     this._model = newModel;
+//   }
+// }
+
+// const carInstance = new Car({ brand: 'Audi', model: 'Q3', price: 35000 });
+// // console.log(carInstance);
+
+// console.log(carInstance.model);
+// carInstance.model = 'Q4';
+// console.log(carInstance.model);
+
+// console.log(carInstance.price);
+// carInstance.price = 50000;
+// console.log(carInstance.price);
+
+// console.log(carInstance);
+
+// ====================================================================
+
+// class Hero {
+//   constructor({ name = 'hero', xp = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+
+//   gainXp(amount) {
+//     console.log(`${this.name} отримує ${amount} досвіту`);
+//     this.xp += amount;
+//   }
+// }
+
+// class Warrior extends Hero {
+//   constructor({ weapon, ...restProps } = {}) {
+//     super(restProps);
+
+//     this.weapon = weapon;
+//   }
+
+//   attack() {
+//     console.log(`${this.name} attackes with ${this.weapon}`);
+//   }
+// }
+
+// class Berserk extends Warrior {
+//   constructor({ warcry, ...restProps } = {}) {
+//     super(restProps);
+
+//     this.warcry = warcry;
+//   }
+
+//   babyRage() {
+//     console.log(this.warcry);
+//   }
+// }
+
+// class Mage extends Hero {
+//   constructor({ spells, ...restProps } = {}) {
+//     super(restProps);
+
+//     this.spells = spells;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} casts ${this.spells}`);
+//   }
+// }
+
+// const mango = new Warrior({ name: 'Mango', xp: 1000, weapon: 'alebarda' });
+// console.log(mango);
+
+// mango.attack();
+// mango.gainXp(1000);
+
+// const poly = new Mage({ name: 'Poly', xp: 500, spells: ['fireball'] });
+// console.log(poly);
+
+// poly.cast();
+// poly.gainXp(200);
+
+// const ajax = new Berserk({ name: 'Ajax', xp: 500, weapon: 'axe', warcry: 'waaaaakaaaa' });
+// console.log(ajax);
+
+// ajax.babyRage();
+// ajax.attack();
+// ajax.gainXp(300);
+
+// ====================================================================
