@@ -880,3 +880,29 @@
 
 // const objA = new Admin('Admin', 'admin@mail.com', '12345', User.Roles.ADMIN, 'cool icon');
 // console.log(objA);
+
+// ====================================================================
+
+// let arr = [1, 2, 3, 'a', 4, 5, 6];
+// arr = arr.filter(item => typeof item === 'number');
+// console.log(arr);
+
+// ====================================================================
+
+// function calcDays(depth) {
+//     const daylySpeed = 7;
+//     const nightSpeed = 2;
+//     let total = 0;
+//     days = 0;
+//     while (total < depth) {
+//         total += daylySpeed;
+//         days += 1;
+//         if (total < depth) {
+//             total -= nightSpeed;
+//         }
+//     }
+// }
+
+// calcDays(42);
+// calcDays(17);
+// calcDays(18);
