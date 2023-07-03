@@ -906,3 +906,7 @@
 // calcDays(42);
 // calcDays(17);
 // calcDays(18);
+
+// const numbers = [1, 2, 3, 4];
+
+// numbers.forEach(function(){ console.log(this)}, {text: 'I am Groot!'})
