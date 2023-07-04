@@ -222,11 +222,34 @@ const cars = [
 
 // ====================================================================
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
+// // const countOfTags = tweets
+// //   .flatMap(({ tags }) => tags)
+// //   .reduce((acc, element) => {
+// //     if (acc[element]) {
+// //       acc[element] += 1;
+// //     } else {
+// //       acc[element] = 1;
+// //     }
+// //     return acc;
+// //   }, {});
+
+// // console.log(countOfTags);
+
+// const countOfTags = tweets
+//   .flatMap(({ tags }) => tags)
+//   .reduce(
+//     (acc, element) => ({...acc, [element]: acc[element] ? (acc[element] += 1) : (acc[element] = 1) }),
+//     {}
+//   );
+
+// console.log(countOfTags);
+
+// ====================================================================
