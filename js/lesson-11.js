@@ -443,3 +443,239 @@
 
 // const link = document.querySelector(".article .link");
 // console.log(link.innerHTML);
+
+// const navEl = document.querySelector('ul');
+// console.log(navEl);
+
+// const navEl = document.querySelector('.site-nav__item');
+// console.log(navEl);
+// console.log(navEl.classList);
+// // navEl.classList.add('first');
+// // navEl.classList.remove('site-nav__item');
+
+// // const navLinksEl = document.querySelectorAll('.site-nav__item');
+// // console.log(navLinksEl);
+
+// const magicBtn = document.querySelector('.js-mag-btn');
+
+// magicBtn.addEventListener('click', () => {
+//   navEl.classList.toggle('qwerty');
+// });
+
+// const currentPageUrl = '/portfolio';
+
+// const linkEl = document.querySelector(`.site-nav__link[href="${currentPageUrl}"]`);
+// console.log(linkEl);
+
+// const titleEl = document.createElement('h1');
+// titleEl.classList.add('page-title');
+// titleEl.textContent = 'Це заголовок сторінки';
+
+// // console.log(titleEl);
+
+// // document.body.appendChild(titleEl);
+
+// const imageEl = document.createElement('img');
+// imageEl.src =
+//   'https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80';
+// imageEl.alt = 'This is cat';
+// // imageEl.setAttribute('width', 640);
+// imageEl.width = 240;
+
+// console.log(imageEl.width);
+// console.log(imageEl);
+
+// // document.body.appendChild(imageEl);
+
+// const navEl = document.querySelector('.site-nav');
+// // const newEl = document.createElement('p');
+// // newEl.textContent = 'HEEEEEEEELLOOOOOOOOOOOOOOOOO';
+// // navEl.appendChild(newEl);
+
+// const navItemEl = document.createElement('li');
+// navItemEl.classList.add('site-nav__item');
+
+// const navLinkEl = document.createElement('a');
+// navLinkEl.classList.add('site-nav__link');
+// navLinkEl.textContent = 'Особистий кабінет';
+// navLinkEl.href = '/profile';
+
+// console.log(navItemEl);
+// console.log(navLinkEl);
+
+// navItemEl.appendChild(navLinkEl);
+
+// console.log(navItemEl);
+
+// // navEl.appendChild(navItemEl);
+
+// navEl.insertBefore(navItemEl, navEl.firstElementChild);
+
+// const heroEl = document.createElement('hero');
+// heroEl.append(titleEl, imageEl);
+
+// document.body.insertBefore(heroEl, navEl);
+
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'grey', color: '#607D88' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// const option = colorPickerOptions[0];
+
+// const buttonEl = document.createElement('button');
+// buttonEl.type = 'button';
+// buttonEl.textContent = option.label;
+// buttonEl.style.backgroundColor = option.color;
+// buttonEl.style.width = 140;
+
+// console.log(buttonEl);
+
+// const colorPickerContainerEl = document.querySelector('.js-color-picker');
+
+// const elements = [];
+
+// for (const color of colorPickerOptions) {
+//   const buttonEl = document.createElement('button');
+//   buttonEl.type = 'button';
+//   buttonEl.textContent = color.label;
+//   buttonEl.style.backgroundColor = color.color;
+// //   buttonEl.style.width = '80px';
+//     buttonEl.classList.add('color-picker__option')
+
+//   elements.push(buttonEl);
+// }
+
+// console.log(elements);
+
+// const colorPickerContainerEl = document.querySelector('.js-color-picker');
+
+// // const elements = colorPickerOptions.map(option => {
+// //   const buttonEl = document.createElement('button');
+// //   buttonEl.type = 'button';
+// //   buttonEl.classList.add('color-picker__option');
+// //   buttonEl.textContent = option.label;
+// //   buttonEl.style.backgroundColor = option.color;
+
+// //   return buttonEl;
+// // });
+
+// // console.log(elements);
+
+// // colorPickerContainerEl.append(...elements);
+
+// const makeColorPickerOptions = options => {
+//   return options.map(option => {
+//     const buttonEl = document.createElement('button');
+//     buttonEl.type = 'button';
+//     buttonEl.classList.add('color-picker__option');
+//     buttonEl.textContent = option.label;
+//     buttonEl.style.backgroundColor = option.color;
+
+//     return buttonEl;
+//   });
+// };
+
+// const elements = makeColorPickerOptions(colorPickerOptions);
+// colorPickerContainerEl.append(...elements);
+
+// ====================================================================
+
+// const product = {
+//   name: 'Server',
+//   description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//   price: 2000,
+//   available: true,
+//   onSale: true,
+// };
+
+// const productEl = document.createElement('article');
+// productEl.classList.add('product');
+
+// const nameEl = document.createElement('h2');
+// nameEl.textContent = product.name;
+// nameEl.classList.add('product__name');
+
+// const descrEl = document.createElement('p');
+// descrEl.textContent = product.description;
+// descrEl.classList.add('product__descr');
+
+// const priceEl = document.createElement('p');
+// priceEl.textContent = product.price;
+// priceEl.classList.add('product__price');
+
+// console.log(productEl);
+// // console.log(nameEl);
+// // console.log(descrEl);
+// // console.log(priceEl);
+
+// productEl.append(nameEl, descrEl, priceEl);
+
+const products = [
+  {
+    name: 'Server',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    price: 2000,
+    available: true,
+    onSale: true,
+  },
+  {
+    name: 'Monitor',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    price: 4000,
+    available: true,
+    onSale: true,
+  },
+  {
+    name: 'Proccesor',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    price: 1200,
+    available: true,
+    onSale: true,
+  },
+  {
+    name: 'Memory',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    price: 1000,
+    available: true,
+    onSale: true,
+  },
+];
+
+console.log(products);
+
+const productContainerEl = document.querySelector('.js-products');
+
+const makeProductCard = ({ name, description, price }) => {
+  const productEl = document.createElement('article');
+  productEl.classList.add('product');
+
+  const nameEl = document.createElement('h2');
+  nameEl.textContent = name;
+  nameEl.classList.add('product__name');
+
+  const descrEl = document.createElement('p');
+  descrEl.textContent = description;
+  descrEl.classList.add('product__descr');
+
+  const priceEl = document.createElement('p');
+  priceEl.textContent = price;
+  priceEl.classList.add('product__price');
+
+  productEl.append(nameEl, descrEl, priceEl);
+
+  return productEl;
+};
+
+// console.log(makeProductCard(products[2]));
+
+const elements = products.map(makeProductCard);
+console.log(elements);
+
+productContainerEl.append(...elements);
+
+
