@@ -467,6 +467,8 @@
 // const linkEl = document.querySelector(`.site-nav__link[href="${currentPageUrl}"]`);
 // console.log(linkEl);
 
+// ============================================================================
+
 // const titleEl = document.createElement('h1');
 // titleEl.classList.add('page-title');
 // titleEl.textContent = 'Це заголовок сторінки';
@@ -615,67 +617,220 @@
 
 // productEl.append(nameEl, descrEl, priceEl);
 
-const products = [
-  {
-    name: 'Server',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    price: 2000,
-    available: true,
-    onSale: true,
-  },
-  {
-    name: 'Monitor',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    price: 4000,
-    available: true,
-    onSale: true,
-  },
-  {
-    name: 'Proccesor',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    price: 1200,
-    available: true,
-    onSale: true,
-  },
-  {
-    name: 'Memory',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    price: 1000,
-    available: true,
-    onSale: true,
-  },
-];
+// const products = [
+//   {
+//     name: 'Server',
+//     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//     price: 2000,
+//     available: true,
+//     onSale: true,
+//   },
+//   {
+//     name: 'Monitor',
+//     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//     price: 4000,
+//     available: true,
+//     onSale: true,
+//   },
+//   {
+//     name: 'Proccesor',
+//     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//     price: 1200,
+//     available: true,
+//     onSale: true,
+//   },
+//   {
+//     name: 'Memory',
+//     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//     price: 1000,
+//     available: true,
+//     onSale: true,
+//   },
+// ];
 
-console.log(products);
+// console.log(products);
 
-const productContainerEl = document.querySelector('.js-products');
+// const productContainerEl = document.querySelector('.js-products');
 
-const makeProductCard = ({ name, description, price }) => {
-  const productEl = document.createElement('article');
-  productEl.classList.add('product');
+// const makeProductCard = ({ name, description, price }) => {
+//   const productEl = document.createElement('article');
+//   productEl.classList.add('product');
 
-  const nameEl = document.createElement('h2');
-  nameEl.textContent = name;
-  nameEl.classList.add('product__name');
+//   const nameEl = document.createElement('h2');
+//   nameEl.textContent = name;
+//   nameEl.classList.add('product__name');
 
-  const descrEl = document.createElement('p');
-  descrEl.textContent = description;
-  descrEl.classList.add('product__descr');
+//   const descrEl = document.createElement('p');
+//   descrEl.textContent = description;
+//   descrEl.classList.add('product__descr');
 
-  const priceEl = document.createElement('p');
-  priceEl.textContent = price;
-  priceEl.classList.add('product__price');
+//   const priceEl = document.createElement('p');
+//   priceEl.textContent = price;
+//   priceEl.classList.add('product__price');
 
-  productEl.append(nameEl, descrEl, priceEl);
+//   productEl.append(nameEl, descrEl, priceEl);
 
-  return productEl;
-};
+//   return productEl;
+// };
 
-// console.log(makeProductCard(products[2]));
+// // console.log(makeProductCard(products[2]));
 
-const elements = products.map(makeProductCard);
-console.log(elements);
+// const elements = products.map(makeProductCard);
+// console.log(elements);
 
-productContainerEl.append(...elements);
+// productContainerEl.append(...elements);
 
+// ===========================  TASK 1  ==================================
 
+// const items = document.querySelectorAll('.js-item');
+// console.log(items);
+
+// const ul = document.querySelector('ul');
+// console.log(ul);
+
+// // const li = document.createElement('li');
+// // console.log(li);
+
+// // ul.append(li);
+
+// const arr = [];
+
+// for (let i = 0; i < 3; i += 1) {
+//   const li = document.createElement('li');
+//   arr.push(li);
+// }
+
+// ul.append(...arr);
+
+// const refs = {
+//   staticItems: document.querySelectorAll('.js-item'),
+//   dynemicItems: document.getElementsByClassName('js-item'),
+//   ul: document.querySelector('ul'),
+// };
+
+// // const arr = [];
+
+// // for (let i = 0; i < 3; i += 1) {
+// //   const li = document.createElement('li');
+// //   const img = document.createElement('img');
+// //   const div = document.createElement('div');
+// //   const a = document.createElement('a');
+// //   li.append(img);
+// //   div.append(a);
+// //   li.append(div);
+// //   li.classList.add('js-item');
+// //   // li.textContent = refs.dynemicItems.length + i + 1;
+// //   li.textContent = Number(refs.ul.lastElementChild.textContent) + i + 1;
+
+// //   arr.push(li);
+// // }
+
+// // refs.ul.append(...arr);
+
+// // console.log('staticItems', refs.staticItems.length);
+// // console.log('dynemicItems', refs.dynemicItems.length);
+
+// const arr = [];
+// for (let i = 1; i <= 3; i += 1) {
+//   // const markup = `<li class="js-item"><img src="" alt="" /><div><a href=""></a></div></li>`;
+//   const markup = `<li class="js-item">${Number(refs.ul.lastElementChild.textContent) + i}</li>`;
+//   arr.push(markup);
+// }
+
+// refs.ul.insertAdjacentHTML('beforeend', arr.join(''));
+
+// ===========================  TASK 1  ==================================
+
+// const refs = {
+//   text: document.querySelector('.test'),
+//   input: document.querySelector('input'),
+// };
+
+// console.log(refs.text.textContent);
+// console.log(refs.input.value);
+
+// refs.input.value = refs.text.textContent;
+
+// console.log(refs.text.dataset.id);
+// console.log(refs.text.getAttribute('data-id'));
+// console.log(refs.text.getAttribute('id'));
+
+// console.log(typeof refs.text.getAttribute('id'));
+
+// ====================================================
+
+// const cars = [
+//   {
+//     id: 1,
+//     car: 'Honda',
+//     type: 'Civic',
+//     price: 12000,
+//     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU',
+//   },
+//   {
+//     id: 2,
+//     car: 'Audi',
+//     type: 'Q7',
+//     price: 40000,
+//     img: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg',
+//   },
+//   {
+//     id: 3,
+//     car: 'BMW',
+//     type: '5 siries',
+//     price: 9000,
+//     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU',
+//   },
+//   {
+//     id: 4,
+//     car: 'Honda',
+//     type: 'Accord',
+//     price: 20000,
+//     number: '+380000000000',
+//     img: 'https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg',
+//   },
+//   {
+//     id: 5,
+//     car: 'Volvo',
+//     type: 'XC60',
+//     price: 7000,
+//     img: 'https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320',
+//   },
+// ];
+
+// const listRef = document.querySelector('.js-list');
+
+// // const markup = cars.map(
+// //   ({id, car, price, type, img }) =>
+// //     `<li data-id=${id}>
+// //       <img src="${img}" alt="${type}" class="img-car" />
+// //       <h2>Марка: ${car}</h2>
+// //       <h2>Модель: ${type}</h2>
+// //       <p>Ціна: ${price}</p>
+// //     </li>`
+// // ).join('');
+
+// const markup = cars.reduce(
+//   (acc, { id, car, price, type, img }) =>
+//     acc +
+//     `<li data-id=${id}>
+//       <img src="${img}" alt="${type}" class="img-car" />
+//       <h2>Марка: ${car}</h2>
+//       <h2>Модель: ${type}</h2>
+//       <p>Ціна: ${price}</p>
+//     </li>`,
+//   ''
+// );
+
+// listRef.style.listStyle = 'none';
+// listRef.style.display = 'flex';
+// listRef.style.flexWrap = 'wrap';
+// listRef.style.justifyContent = 'space-between';
+
+// console.log(markup);
+
+// listRef.insertAdjacentHTML('beforeend', markup);
+
+// const items = document.querySelectorAll('li');
+// items.forEach(item => item.style.height = '400px');
+// console.log(items);
