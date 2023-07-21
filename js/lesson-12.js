@@ -100,9 +100,9 @@
 
 // ======================================================================
 
-const targetBtn = document.querySelector('.js-target-btn');
-const addListenerBtn = document.querySelector('.js-add-listener');
-const removeListenerBtn = document.querySelector('.js-remove-listener');
+// const targetBtn = document.querySelector('.js-target-btn');
+// const addListenerBtn = document.querySelector('.js-add-listener');
+// const removeListenerBtn = document.querySelector('.js-remove-listener');
 
 // targetBtn.addEventListener('click', () => {
 //   console.log('CLICK');
@@ -140,24 +140,84 @@ const removeListenerBtn = document.querySelector('.js-remove-listener');
 //   console.log('Клік по цільовій кнопці');
 // }
 
-const form = document.querySelector('.js-register-form');
+// ======================================================================
 
-form.addEventListener('submit', onFormSubmit);
+// const form = document.querySelector('.js-register-form');
 
-function onFormSubmit(event) {
-  event.preventDefault();
+// form.addEventListener('submit', onFormSubmit);
 
-  // console.log(event);
-  // console.dir(event.currentTarget);
-  // console.dir(event.currentTarget.elements.subscription.value);
+// function onFormSubmit(event) {
+//   event.preventDefault();
 
-  // console.log('Це сабміт форми');
+//   // console.log(event);
+//   // console.dir(event.currentTarget);
+//   // console.dir(event.currentTarget.elements.subscription.value);
 
-  const formElements = event.currentTarget.elements;
+//   // console.log('Це сабміт форми');
 
-  const mail = formElements.email.value;
-  const password = formElements.password.value;
+//   //   const formElements = event.currentTarget.elements;
 
-  console.log(mail);
-  console.log(password);
-}
+//   //   const mail = formElements.email.value;
+//   //   const password = formElements.password.value;
+//   //   const subscription = formElements.subscription.value;
+
+//   //   //   console.log(mail);
+//   //   //   console.log(password);
+//   //   //   console.log(subscription);
+
+//   //   const formData = {
+//   //     mail,
+//   //     password,
+//   //     subscription,
+//   //     };
+
+//   //     console.log(formData);
+
+//   const formData = new FormData(event.currentTarget);
+
+//     console.log(formData);
+
+//     formData.forEach((value, name) => {
+//         console.log('onFormSubmit -> value:', value);
+//         console.log('onFormSubmit -> name:', name);
+//     })
+// }
+
+// ======================================================================
+
+// const refs = {
+//   input: document.querySelector('.js-input'),
+//   nameLabel: document.querySelector('.js-button > span'),
+//   licenseCheckbox: document.querySelector('.js-license'),
+//   btn: document.querySelector('.js-button'),
+// };
+
+// // refs.input.addEventListener('focus', onInputFocus);
+// // refs.input.addEventListener('blur', onInputBlur);
+// // refs.input.addEventListener('change', onInputChange);
+// // refs.input.addEventListener('input', onInputChange);
+
+// refs.input.addEventListener('input', onInputChange);
+// refs.licenseCheckbox.addEventListener('change', onLicenseChange);
+
+// function onInputFocus() {
+//   console.log('Інпут отримав фокус - подія focus');
+// };
+
+// function onInputBlur() {
+//   console.log('Інпут втратив фокус - подія blur');
+// };
+
+// function onInputChange(event) {
+//   console.log(event.currentTarget.value);
+//   refs.nameLabel.textContent = event.currentTarget.value;
+// };
+
+// function onLicenseChange(event) {
+//   console.log(event.currentTarget.checked);
+//   console.log(refs.btn.disabled);
+
+//   refs.btn.disabled = !event.currentTarget.checked;
+// };
+
+// ======================================================================
