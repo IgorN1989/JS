@@ -143,10 +143,14 @@
   height: 50px;
 } */
 
-.color-picker__option {
+/* .color-picker__option {
   display: inline-block;
   width: 64px;
   height: 64px;
   margin: 4px;
   cursor: pointer;
+} */
+
+.img-car {
+    width: 280px;
 }
