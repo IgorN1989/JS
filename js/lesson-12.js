@@ -221,3 +221,89 @@
 // };
 
 // ======================================================================
+
+// const refs = {
+//     output: document.querySelector('.js-output'),
+//     clearBtn: document.querySelector('.js-clear'),
+// };
+
+// window.addEventListener('keydown', onKeypress);
+// refs.clearBtn.addEventListener('click', onCleanOutput);
+
+// function onKeypress(event) {
+//     console.log('event.key:', event.key);
+//     console.log('event.code:', event.code);
+
+//     refs.output.textContent += event.key;
+// };
+
+// function onCleanOutput() {
+//     refs.output.textContent = '';
+// };
+
+// ======================================================================
+
+// const boxRef = document.querySelector('.js-box');
+
+// boxRef.addEventListener('mouseenter', onMouseEnter);
+// boxRef.addEventListener('mouseleave', onMouseLeave);
+// // boxRef.addEventListener('mouseover', onMouseEnter);
+// // boxRef.addEventListener('mouseout', onMouseLeave);
+// boxRef.addEventListener('mousemove', onMouseMove);
+
+// function onMouseEnter(event) {
+//     const box = event.currentTarget;
+//     box.classList.add('box--active');
+// };
+
+// function onMouseLeave(event) {
+//     const box = event.currentTarget;
+//     box.classList.remove('box--active');
+// };
+
+// function onMouseMove(event) {
+//     console.log(event);
+// };
+
+// ======================================================================
+
+// const refs = {
+//   openModalBtn: document.querySelector('[data-action="open-modal"]'),
+//   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+//   backdrop: document.querySelector('.js-backdrop'),
+// };
+
+// refs.openModalBtn.addEventListener('click', onOpenModal);
+// refs.closeModalBtn.addEventListener('click', onCloseModal);
+// refs.backdrop.addEventListener('click', onBackdropClick);
+
+// function onOpenModal() {
+//   window.addEventListener('keydown', onEscKeyPress);
+//   document.body.classList.add('show-modal');
+// }
+
+// function onCloseModal() {
+//   window.removeEventListener('keydown', onEscKeyPress);
+//   document.body.classList.remove('show-modal');
+// }
+
+// function onBackdropClick(event) {
+//   // console.log('Клік по backdrop');
+
+//   // console.log(event.currentTarget);
+//   // console.log(event.target);
+
+//   if (event.currentTarget === event.target) {
+//     // console.log('Клік саме по backdrop');
+//     onCloseModal();
+//   }
+// }
+
+// function onEscKeyPress(event) {
+//   // console.log(event.code);
+//   const ESC_KEY_CODE = 'Escape';
+
+//   if (event.code === ESC_KEY_CODE) {
+//     onCloseModal();
+//   }
+// }
