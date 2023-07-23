@@ -307,3 +307,149 @@
 //     onCloseModal();
 //   }
 // }
+
+// ======================================================================
+
+// const cars = [
+//   {
+//     id: 1,
+//     car: 'Honda',
+//     type: 'Civic',
+//     price: 12000,
+//     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU',
+//   },
+//   {
+//     id: 2,
+//     car: 'Audi',
+//     type: 'Q7',
+//     price: 40000,
+//     img: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg',
+//   },
+//   {
+//     id: 3,
+//     car: 'BMW',
+//     type: '5 siries',
+//     price: 9000,
+//     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU',
+//   },
+//   {
+//     id: 4,
+//     car: 'Honda',
+//     type: 'Accord',
+//     price: 20000,
+//     number: '+380000000000',
+//     img: 'https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg',
+//   },
+//   {
+//     id: 5,
+//     car: 'Volvo',
+//     type: 'XC60',
+//     price: 7000,
+//     img: 'https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320',
+//   },
+// ];
+
+// const listRef = document.querySelector('.js-list');
+// const form = document.querySelector('.js-search');
+
+// form.addEventListener('submit', onSearch);
+
+// function onSearch(event) {
+//   event.preventDefault();
+
+//   const { searchQuery, searchKey } = event.currentTarget.elements;
+
+//   // OR
+
+//   // const { elements: { searchQuery, searchKey } } = event.currentTarget;
+
+//   //   console.dir(event.currentTarget);
+//   //   console.log(event.currentTarget.searchQuery);
+//   //   console.log(event.currentTarget.elements.searchKey);
+//   //   console.log(searchQuery.value);
+//   //   console.log(searchKey.value);
+
+//   //   const currentCars = cars.filter(
+//   //     item => item[searchKey.value].toLowerCase() === searchQuery.value.trim().toLowerCase()
+//   //   );
+
+//   const currentCars = cars.filter(item =>
+//     item[searchKey.value].toLowerCase().includes(searchQuery.value.trim().toLowerCase())
+//   );
+
+//   //   console.log(currentCars);
+//   if (currentCars.length) {
+//     listRef.innerHTML = createMarkup(currentCars);
+//   } else {
+//     listRef.innerHTML = '404';
+//   }
+// }
+
+// function createMarkup(arr) {
+//   return arr
+//     .map(
+//       ({ id, car, price, type, img }) =>
+//         `<li data-id=${id}>
+//       <img src="${img}" alt="${type}" class="img-car" />
+//       <h2>Марка: ${car}</h2>
+//       <h2>Модель: ${type}</h2>
+//       <p>Ціна: ${price}</p>
+//     </li>`
+//     )
+//     .join('');
+// }
+
+// listRef.insertAdjacentHTML('beforeend', createMarkup(cars));
+
+// ======================================================================
+
+// const input = document.querySelector('.js-input');
+// // console.log(input);
+// const title = document.querySelector('.js-title');
+
+// input.addEventListener('input', onSearchInput);
+// input.addEventListener('change', onChangeChange);
+
+// function onSearchInput(evt) {
+//     console.log(evt.currentTarget.value);
+//     title.textContent = evt.currentTarget.value;
+// }
+
+// function onChangeChange() {
+//     alert('Return to INPUT!!!');
+// }
+
+// ======================================================================
+
+// const clickMe = document.querySelector('.js-click');
+// clickMe.addEventListener('click', onClickMe);
+
+// let counter = 1;
+
+// function onClickMe(evt) {
+//     const changeValue = 50 * counter;
+//     counter += 1;
+//     console.log(evt);
+//     evt.currentTarget.style.margin = `${changeValue}px ${changeValue}px`;
+// }
+
+// ======================================================================
+
+// document.addEventListener('keydown', onKey);
+
+// function onKey(evt) {
+//     if (evt.code === 'Escape') {
+//         alert('Escape')
+//    }
+// }
+
+// document.addEventListener('keydown', onKey);
+// // document.addEventListener('keydown', onKey, { once: true });
+
+// function onKey(evt) {
+//   console.log(evt);
+//   if (evt.code === 'Escape') {
+//     document.body.classList.toggle('test');
+//     // document.removeEventListener('keydown', onKey);
+//   }
+// }
