@@ -21,7 +21,9 @@
     background-color: green;
 } */
 
-body.show-modal .backdrop {
+/* ============================= */
+
+/* body.show-modal .backdrop {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
@@ -57,4 +59,21 @@ body.show-modal .modal {
     min-height: 328px;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+} */
+
+/* ============================= */
+
+/* .list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.img-car {
+    width: 280px;
+} */
+
+/* .test {
+    background-color: red;
+} */
