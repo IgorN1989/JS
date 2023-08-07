@@ -159,3 +159,167 @@
 // function addActiveCardClass(card) {
 //   card.classList.add('is-active');
 // }
+
+// =========================================================
+
+// const instruments = [
+//   {
+//     id: 1,
+//     img: 'https://static.dnipro-m.ua/cache/products/1755/catalog_origin_261195.jpg',
+//     name: 'Молоток',
+//     price: 150,
+//   },
+//   {
+//     id: 2,
+//     img: 'https://static.dnipro-m.ua/cache/products/5587/catalog_origin_190742.jpg',
+//     name: 'Перфоратор',
+//     price: 3000,
+//   },
+//   {
+//     id: 3,
+//     img: 'https://static.dnipro-m.ua/cache/products/4601/catalog_origin_271394.jpg',
+//     name: 'Рівень',
+//     price: 2000,
+//   },
+// ];
+
+// const basket = [];
+// const favorites = [];
+// const list = document.querySelector('.list');
+// const markup = instruments
+//   .map(
+//     ({ id, img, name, price }) =>
+//       `
+//     <li data-id="${id}">
+//       <img src="${img}" alt="${name}" width="300px"/>
+//       <h2>${name}</h2>
+//       <p>Ціна: ${price}</p>
+//       <div>
+//         <button class="js-add">Купити</button>
+//         <button class="js-favorite">В обране</button>
+//         <button class="js-delete" disabled>Видалити</button>
+//       </div>
+//     </li>
+//     `
+//   )
+//   .join('');
+
+// list.insertAdjacentHTML('beforeend', markup);
+
+// list.addEventListener('click', onClick);
+
+// function onClick(evt) {
+//   if (evt.target.classList.contains('js-add')) {
+//     const currentIdx = Number(evt.target.closest('li').dataset.id);
+//     const currentProduct = { ...instruments.find(({ id }) => id === currentIdx) };
+
+//     const inBasket = basket.find(({ id }) => id === currentIdx);
+//     if (!inBasket) {
+//       currentProduct.qty = 1;
+//         basket.push(currentProduct);
+//         evt.target.parentElement.lastElementChild.removeAttribute('disabled');
+//     } else {
+//       inBasket.qty += 1;
+//       }
+//       console.log(basket);
+//   }
+
+//   if (evt.target.classList.contains('js-favorite')) {
+//     const currentIdx = Number(evt.target.closest('li').dataset.id);
+//     const currentProduct = { ...instruments.find(({ id }) => id === currentIdx) };
+
+//     const inFavorites = basket.find(({ id }) => id === currentIdx);
+//     if (!inFavorites) {
+//       currentProduct.qty = 1;
+//       favorites.push(currentProduct);
+//     } else {
+//       inFavorites.qty += 1;
+//     }
+//   }
+
+//   if (evt.target.classList.contains('js-delete')) {
+//     const currentIdx = Number(evt.target.closest('li').dataset.id);
+//     const idxInBasket = basket.findIndex(({ id }) => id === currentIdx);
+
+//       basket.splice(idxInBasket, 1);
+//       evt.target.setAttribute('disabled', true);
+//     console.log(basket);
+//   }
+// }
+
+// =========================================================
+
+// const win = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [1, 4, 7],
+//   [2, 5, 8],
+//   [3, 6, 9],
+//   [1, 5, 9],
+//   [3, 5, 7],
+// ];
+
+// const content = document.querySelector('.content');
+// const restartBtn = document.querySelector('.js-restart');
+
+// let player = 'X';
+
+// function createMarkup() {
+//   let markup = '';
+//   for (let i = 1; i <= 9; i += 1) {
+//     markup += `<div class="item" data-id="${i}"></div>`;
+//   }
+
+//   return markup;
+// }
+
+// content.insertAdjacentHTML('beforeend', createMarkup());
+
+// content.addEventListener('click', onClick);
+// restartBtn.addEventListener('click', onRestartBtnClick);
+
+// function onClick(evt) {
+//   if (!evt.target.textContent) {
+//     evt.target.textContent = player;
+//     player = player === 'X' ? 'O' : 'X';
+//   }
+// }
+
+// function onRestartBtnClick() {
+//   player = 'X';
+//   content.innerHTML = createMarkup();
+// }
+
+// =========================================================
+
+const refs = {
+  input: document.querySelector('input'),
+  createBtn: document.querySelector('[data-create]'),
+  destroyBtn: document.querySelector('[data-destroy]'),
+  boxes: document.querySelector('#boxes'),
+}
+
+refs.createBtn.addEventListener('click', createBoxes);
+refs.destroyBtn.addEventListener('click', destroyBoxes);
+
+function createBoxes() {
+  const quantity = refs.input.value;
+  let size = 30;
+  let markup = '';
+
+  for (let i = 0; i < quantity; i += 1) {
+    markup+= `<div></div>`
+  }
+}
+
+function destroyBoxes() {
+  refs.boxes.textContent = '';
+}
+
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
