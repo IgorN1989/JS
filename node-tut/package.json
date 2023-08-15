@@ -1,0 +1,21 @@
+{
+  "name": "tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "IGOR_N <nagrebelnyi.igor@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^17.9.2",
+    "shortid": "^2.2.16",
+    "uuid": "^9.0.0",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

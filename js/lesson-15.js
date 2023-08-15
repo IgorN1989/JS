@@ -6,7 +6,6 @@
 
 // console.log("Після виклику setTimeout");
 
-
 // for (let index = 0; index < 10000; index++) {
 //     console.log(index);
 // }
@@ -26,7 +25,6 @@
 //     clearTimeout(timerId)
 // }
 
-
 // ===========================  TASK  ==================================
 
 // const refs = {
@@ -36,7 +34,6 @@
 // refs.notification.addEventListener("click", onNotificationClick);
 
 // showNotification();
-
 
 // function onNotificationClick() {
 //     hideNotification();
@@ -79,22 +76,19 @@
 //         records[prop] = tracks
 //   }
 
-
-
-
 //   return records;
 // }
 
 // updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
-function getExtremeElements(array) {
+// function getExtremeElements(array) {
+//   // return array.splice(0, 1).concat(array.splice(array.length-1));
+// }
 
-  
+// console.log(getExtremeElements([1,2,3,4,5,6,7,8,9,10]));
 
-  // return array.splice(0, 1).concat(array.splice(array.length-1));
-
- 
-
-}
-
-console.log(getExtremeElements([1,2,3,4,5,6,7,8,9,10]));
+// =======================================================================
+// =======================================================================
+// =======================================================================
+// =======================================================================
+// =======================================================================
