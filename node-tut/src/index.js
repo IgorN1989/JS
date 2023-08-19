@@ -1,7 +1,7 @@
-import validatePassword from './js/validate-password';
+// import validatePassword from './js/validate-password';
 
 // console.log(validatePassword);
-console.log(validatePassword('qweqweqwe'));
+// console.log(validatePassword('qweqweqwe'));
 
 // import apiService from './js/api-service';
 // console.log(apiService);
@@ -22,6 +22,8 @@ console.log(validatePassword('qweqweqwe'));
 // import * as apiService from './js/api-service';
 // console.log(apiService);
 
-import { addUser } from './js/api-service';
+// import { addUser } from './js/api-service';
 
-addUser('mango');
+// addUser('mango');
+
+import './js/colorpicker.js';
