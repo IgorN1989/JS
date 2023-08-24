@@ -58,29 +58,34 @@
 //   console.log(error);
 // }
 
+// const makeOrder = (dish, onSuccess, onError) => {
+//   return new Promise((resolve, reject) => {
+//     const passed = Math.random() > 0.5;
 
+//     if (passed) {
+//       resolve(`Ось ваша страва ${dish}`);
+//     }
 
+//     reject('вибачьте, закінчились продукти');
+//   });
+// };
 
-const makeOrder = (dish, onSuccess, onError) => {
-  return new Promise((resolve, reject) => {
-    const passed = Math.random() > 0.5;
-   
-    if (passed) {
-      resolve(`Ось ваша страва ${dish}`);
-    }
+// makeOrder('пиріжок').then(onMakeOrderSuccess).catch(onMakeOrderError)
 
-    reject('вибачьте, закінчились продукти');
-  });
-};
+// function onMakeOrderSuccess(result) {
+//   console.log('onMakeOrderSuccess');
+//   console.log(result);
+// }
 
-makeOrder('пиріжок').then(onMakeOrderSuccess).catch(onMakeOrderError)
+// function onMakeOrderError(error) {
+//   console.log('onMakeOrderError');
+//   console.log(error);
+// }
 
-function onMakeOrderSuccess(result) {
-  console.log('onMakeOrderSuccess');
-  console.log(result);
-}
+// ========================================================
+// ========================================================
+// ========================================================
+// ========================================================
+// ========================================================
 
-function onMakeOrderError(error) {
-  console.log('onMakeOrderError');
-  console.log(error);
-}
+// const promise = new Promise()
