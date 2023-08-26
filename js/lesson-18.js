@@ -352,3 +352,79 @@
 //   const tr = `<tr><td>${raceCounter}</td><td>${horse}</td><td>${time}</td></tr>`;
 //   refs.tableBody.insertAdjacentHTML('beforeend', tr);
 // }
+
+// ========================================================
+
+// const promise = new Promise((res, rej) => {
+//   const random = Math.random() > 0.5;
+
+//   setTimeout(() => {
+//     if (random) {
+//       res([{ name: 'Alice' }, { name: 'Kate' }]);
+//     } else {
+//       rej('Error⛔');
+//     }
+//   }, 1000);
+// });
+
+// console.log(promise);
+
+// promise
+//   .then(data => {
+//     console.log(data);
+//     return data;
+//   })
+//   .then(value => {
+//     value.map(item => console.log(item.name));
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     // location.href = './tasks.html';
+//   })
+//   .finally(() => {
+//     console.log('Я виконався після then або catch');
+//   });
+
+// ========================================================
+
+// const selectors = {
+//   startBtn: document.querySelector('.js-start'),
+//   container: document.querySelector('.js-container'),
+// };
+
+// selectors.startBtn.addEventListener('click', handlerStart);
+
+// function handlerStart() {
+//   const promises = [...selectors.container.children].map(_ => createPromise());
+
+//   Promise.allSettled(promises).then(items => {
+//     // console.log(items);
+//     items.forEach((item, i) => {
+//       selectors.container.children[i].textContent = '';
+
+//       setTimeout(() => {
+//         selectors.container.children[i].textContent = item.value || item.reason;
+
+//         if (i === items.length - 1) {
+//           const instance = basicLightbox.create(`<h1>${isWinner ? 'Winner' : 'Loser'}</h1>`);
+//           instance.show();
+//         }
+//       }, (i + 1) * 1000);
+//     });
+
+//     const isWinner =
+//       items.every(({ status }) => status === 'fulfilled') ||
+//       items.every(({ status }) => status === 'rejected');
+//   });
+// }
+
+// function createPromise() {
+//   return new Promise((res, rej) => {
+//     const random = Math.random();
+//     if (random > 0.5) {
+//       res('🍀');
+//     } else {
+//       rej('🍅');
+//     }
+//   });
+// }
