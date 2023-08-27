@@ -91,13 +91,67 @@
 
 // ===================================================================
 
-// const r = fetch('https://pokeapi.co/api/v2/pokemon/2')
-//   .then(responce => {
+// const refs = {
+//   cardContainer: document.querySelector('.js-card-container'),
+//   searchForm: document.querySelector('.js-search-form'),
+// };
+
+// refs.searchForm.addEventListener('submit', onSearch);
+
+// function onSearch(e) {
+//   e.preventDefault();
+
+//   const form = e.currentTarget;
+//   const searchQuery = form.elements.query.value;
+
+//   fetchPokemonById(searchQuery)
+//     .then(renderPokemoncard)
+//     .catch(onFetchError)
+//     .finally(() => form.reset());
+// }
+
+// function fetchPokemonById(pokemonId) {
+//   const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+
+//   return fetch(url).then(responce => {
 //     return responce.json();
-//   })
-//   .then(pokemon => {
-//     console.log(pokemon);
-//   })
-//   .catch(error => {
-//     console.log(error);
 //   });
+// }
+
+// function createMarkup({ sprites, name, weight, height, abilities }) {
+//   return `<div class="card">
+//        <div class="card-img-top">
+//          <img src="${sprites.front_default}" alt="${name}" />
+//        </div>
+//        <div class="card-body">
+//          <h2 class="card-title">Name: ${name}</h2>
+//          <p class="card-text">Weight: ${weight}</p>
+//          <p class="card-text">Height: ${height}</p>
+
+//          <p class="card-text">
+//            <b>Abilities</b>
+//          </p>
+//          <ul class="list-group">
+//            <li class="list-group-item">${abilities[0].ability.name}</li>
+//          </ul>
+//        </div>
+//      </div>;`;
+// }
+
+// function renderPokemoncard(pokemon) {
+//   const markup = createMarkup(pokemon);
+//   refs.cardContainer.innerHTML = markup;
+// }
+
+// function onFetchError(error) {
+//   alert(error);
+//   console.log('Не змогли знайти вашого покемона');
+// }
+
+// ===================================================================
+
+// fetch(
+//   'https://pixabay.com/api/?key=32119761-f60b77538f277e08da301bce8&q=cat&image_type=vector&orientation=horizontal'
+// )
+//   .then(r => r.json())
+//   .then(console.log());
