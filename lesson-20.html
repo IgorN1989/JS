@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/lesson-20.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>LESSON-20</h1>
+    <p><a href="./">На головну</a></p>
+
+    <form class="form-inline search-form js-search-form">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="searchQuery" class="sr-only">Що шукаємо?</label>
+        <input
+          type="text"
+          class="form-control"
+          name="query"
+          id="searchQuery"
+          placeholder="Що шукаємо?"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Шукати</button>
+    </form>
+
+    <ul class="articles js-articles-container"></ul>
+
+    <button type="button" class="btn btn-primary button" data-action="load-more">
+      <span
+        class="spinner-border spinner-border-sm spinner is-hidden"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      <span class="label">Показати ще</span>
+    </button>
+
+    <script src="./js/lesson-20.js" type="module"></script>
+  </body>
+</html>
