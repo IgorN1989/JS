@@ -67,12 +67,12 @@ const BASE_URL = 'http://localhost:3000';
 
 // ======================================================== DELETE (DELETE)
 
-function removeBook(bookId) {
-  const options = {
-    method: 'DELETE',
-  };
+// function removeBook(bookId) {
+//   const options = {
+//     method: 'DELETE',
+//   };
 
-  return fetch(`${BASE_URL}/books/${bookId}`, options).then(response => response.json());
-}
+//   return fetch(`${BASE_URL}/books/${bookId}`, options).then(response => response.json());
+// }
 
-removeBook(6);
+// removeBook(6);
