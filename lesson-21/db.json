@@ -1,0 +1,86 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Last Kingdom",
+      "author": "Bernard Cornwell",
+      "genres": [
+        "adventure"
+      ],
+      "rating": 8.38
+    },
+    {
+      "id": 2,
+      "title": "Dimension of Miracles",
+      "author": "Robert Sheckley",
+      "genres": [
+        "science fiction"
+      ],
+      "rating": 8.51
+    },
+    {
+      "id": 3,
+      "title": "The Temple",
+      "author": "Howard Phillips Lovecraft",
+      "genres": [
+        "horror",
+        "adventure"
+      ],
+      "rating": 7.94
+    },
+    {
+      "id": 4,
+      "title": "Das Urteil",
+      "author": "Franz Kafka",
+      "genres": [
+        "classic"
+      ],
+      "rating": 8.38
+    },
+    {
+      "id": 5,
+      "title": "The Green Mile",
+      "author": "Stephen Edwin King",
+      "genres": [
+        "dark fantasy"
+      ],
+      "rating": 8.98
+    },
+    {
+      "title": "Test Book CSS",
+      "author": "NotMe",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 5,
+      "id": 8
+    },
+    {
+      "title": "Test Book HTML",
+      "author": "Me",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 7,
+      "id": 9
+    },
+    {
+      "title": "Big New Test Book CSS",
+      "author": "Me",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 7,
+      "id": 10
+    },
+    {
+      "title": "Big Test Book HTML",
+      "author": "Me",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 9,
+      "id": 11
+    }
+  ]
+}
