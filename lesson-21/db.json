@@ -81,6 +81,24 @@
       ],
       "rating": 9,
       "id": 11
+    },
+    {
+      "title": "The New Book CSS",
+      "author": "Me",
+      "genres": [
+        "CSS"
+      ],
+      "rating": 9,
+      "id": 12
+    },
+    {
+      "title": "The New Book NODE",
+      "author": "Me",
+      "genres": [
+        "Node"
+      ],
+      "rating": 9,
+      "id": 13
     }
   ]
 }

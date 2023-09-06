@@ -1,19 +1,5 @@
 const BASE_URL = 'http://localhost:3000';
 
-// ======================================================== READ (GET)
-
-// function fetchBooks() {
-//   return fetch(`${BASE_URL}/books`).then(response => response.json());
-// }
-
-// function fetchBookById(bookId) {
-//   return fetch(`${BASE_URL}/books/${bookId}`).then(response => response.json());
-// }
-
-// fetchBooks();
-// fetchBookById(2);
-// fetchBookById(4);
-
 // ======================================================== CREATE (POST)
 
 // function addBook(book) {
@@ -46,6 +32,20 @@ const BASE_URL = 'http://localhost:3000';
 //   console.log('Прийшла відповідь від бекенда');
 //   console.log(book);
 // }
+
+// ======================================================== READ (GET)
+
+// function fetchBooks() {
+//   return fetch(`${BASE_URL}/books`).then(response => response.json());
+// }
+
+// function fetchBookById(bookId) {
+//   return fetch(`${BASE_URL}/books/${bookId}`).then(response => response.json());
+// }
+
+// fetchBooks();
+// fetchBookById(2);
+// fetchBookById(4);
 
 // ======================================================== UPDATE (PATCH || PUT)
 
