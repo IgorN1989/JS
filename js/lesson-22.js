@@ -47,3 +47,27 @@ function getFruit(name) {
 // }
 
 // aMakeSmoothie().then(fruits => console.log(fruits));
+
+// ===============================================================
+
+// function servicesCountry() {
+//   return fetch(`https://restcountries.com/v3.1/name/Ukraine`).then(resp => {
+//     if (!resp.ok) {
+//       throw new Error(resp.statusText);
+//     }
+
+//     return resp.json();
+//   });
+// }
+
+async function servicesCountry() {
+  const resp = await fetch('https://restcountries.com/v3.1/name/Ukraine');
+  if (!resp.ok) {
+    throw new Error(resp.statusText);
+  }
+
+  const data = await resp.json();
+  console.log(data);
+}
+
+servicesCountry();
